@@ -10,5 +10,7 @@ namespace BookStore.Core.Entities
     {
         public DateTime Date { get; set; }
         public int Amount { get; set; }
+
+        public TrackingDetail TrackingDetail { get; set; }
     }
 }

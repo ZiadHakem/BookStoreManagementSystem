@@ -9,5 +9,8 @@ namespace BookStore.Core.Entities
     public class TrackingDetail : BaseEntity
     {
         public string? Status { get; set; }
+
+        public int OrderID { get; set; }
+        public Order Order { get; set; }
     }
 }
