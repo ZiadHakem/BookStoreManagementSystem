@@ -15,8 +15,14 @@ namespace BookStore.Core.Entities
         public int Price { get; set; }
         public string? Statue { get; set; }
 
-        public byte[]? ImageData { get; set; }
+        public string? Image { get; set; }
 
-        
+        public ICollection<CustomerBook>? CustomerBooks { get; set; }
+        public ICollection<BookPublisher>? BookPublishers { get; set; }
+        public ICollection<BookAuthor>? BookAuthors { get; set; }
+
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
+        public ICollection<Order>? Orders { get; set; }
     }
 }

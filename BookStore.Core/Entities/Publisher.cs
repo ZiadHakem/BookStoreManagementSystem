@@ -9,5 +9,6 @@ namespace BookStore.Core.Entities
     public class Publisher:BaseEntity
     {
         public string? Name { get; set; }
+        public ICollection<BookPublisher>? BookPublishers { get; set; }
     }
 }

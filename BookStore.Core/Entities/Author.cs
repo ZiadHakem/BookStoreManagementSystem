@@ -9,5 +9,7 @@ namespace BookStore.Core.Entities
     public class Author : BaseEntity
     {
         public string? Name { get; set; }
+        public ICollection<BookAuthor>? BookAuthors { get; set; }
+
     }
 }

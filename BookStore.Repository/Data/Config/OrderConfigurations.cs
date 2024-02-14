@@ -23,6 +23,20 @@ namespace BookStore.Repository.Data.Config
             builder.Property(order => order.Date)
                 .HasColumnType("datetime")
                 .IsRequired(true);
+
+            builder.Property(order => order.Status)
+                .IsRequired(true)
+                .HasColumnType("int");
+
+            builder.HasOne(order => order.Customer)
+            .WithMany(customer => customer.Orders)
+            .HasForeignKey(order => order.CustomerId)
+            .IsRequired(false);
+
+            builder.HasOne(o => o.Book)
+           .WithMany(b => b.Orders)
+           .HasForeignKey(o => o.BookId);
+
         }
     }
 }

@@ -30,9 +30,13 @@ namespace BookStore.Repository.Data.Config
                 .HasColumnType("varchar")
                 .IsRequired(true);
 
-            builder.Property(book => book.ImageData)
-                .HasColumnType("image")
+            builder.Property(book => book.Image)
+                .HasColumnType("varchar")
                 .IsRequired(true);
+
+            builder.HasOne(b => b.Category)
+            .WithMany(c => c.Books)
+            .HasForeignKey(b => b.CategoryId);
         }
     }
 }

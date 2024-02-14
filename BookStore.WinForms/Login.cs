@@ -1,6 +1,11 @@
-﻿using System;
+﻿using BookStore.Core.Services.Contracts;
+using BookStore.Repository.Data;
+using BookStore.Service;
+using Microsoft.IdentityModel.Protocols;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -12,6 +17,7 @@ namespace BookStore.WinForms
 {
     public partial class Login : Form
     {
+        
         public Login()
         {
             InitializeComponent();
@@ -19,14 +25,13 @@ namespace BookStore.WinForms
 
         private void Login_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (CBAdmin.Checked)
             {
-                 HomeAdmin homeAdmin = new HomeAdmin();
+                HomeAdmin homeAdmin = new HomeAdmin();
                   homeAdmin.Show();
             }
 

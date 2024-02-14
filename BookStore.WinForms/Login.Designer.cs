@@ -34,7 +34,7 @@
             label1 = new Label();
             label2 = new Label();
             button1 = new Button();
-            textBox1 = new TextBox();
+            TBUserName = new TextBox();
             textBox2 = new TextBox();
             label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -108,12 +108,12 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // textBox1
+            // TBUserName
             // 
-            textBox1.Location = new Point(668, 188);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(164, 27);
-            textBox1.TabIndex = 6;
+            TBUserName.Location = new Point(668, 188);
+            TBUserName.Name = "TBUserName";
+            TBUserName.Size = new Size(164, 27);
+            TBUserName.TabIndex = 6;
             // 
             // textBox2
             // 
@@ -141,7 +141,7 @@
             ClientSize = new Size(934, 450);
             Controls.Add(label3);
             Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(TBUserName);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -166,7 +166,7 @@
         private Label label1;
         private Label label2;
         private Button button1;
-        private TextBox textBox1;
+        private TextBox TBUserName;
         private TextBox textBox2;
         private Label label3;
     }
