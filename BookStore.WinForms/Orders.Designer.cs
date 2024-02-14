@@ -49,6 +49,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
+            button1.ForeColor = Color.FromArgb(69, 51, 39);
             button1.Location = new Point(48, 176);
             button1.Name = "button1";
             button1.Size = new Size(156, 58);
@@ -59,6 +60,7 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
+            button2.ForeColor = Color.FromArgb(69, 51, 39);
             button2.Location = new Point(48, 290);
             button2.Name = "button2";
             button2.Size = new Size(156, 58);
@@ -76,7 +78,7 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
-            // Form3
+            // Orders
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -86,8 +88,9 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label2);
-            Name = "Form3";
-            Text = "Form3";
+            Name = "Orders";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Orders";
             Load += Form3_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

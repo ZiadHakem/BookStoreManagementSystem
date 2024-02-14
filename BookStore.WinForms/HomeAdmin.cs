@@ -10,27 +10,23 @@ using System.Windows.Forms;
 
 namespace BookStore.WinForms
 {
-    public partial class Login : Form
+    public partial class HomeAdmin : Form
     {
-        public Login()
+        public HomeAdmin()
         {
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void btOrders_Click(object sender, EventArgs e)
         {
-
+            Orders orders = new Orders();
+            orders.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btCustomer_Click(object sender, EventArgs e)
         {
-            if (CBAdmin.Checked)
-            {
-                 HomeAdmin homeAdmin = new HomeAdmin();
-                  homeAdmin.Show();
-            }
-
-           
+            Customers customers = new Customers();
+            customers.Show();
         }
     }
 }

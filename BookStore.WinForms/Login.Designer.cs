@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             pictureBox1 = new PictureBox();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
+            CBAdmin = new CheckBox();
+            CBCustomer = new CheckBox();
             label1 = new Label();
             label2 = new Label();
             button1 = new Button();
@@ -42,7 +42,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.image2;
+            pictureBox1.Image = Properties.Resources.img2;
             pictureBox1.Location = new Point(1, 0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(468, 451);
@@ -50,29 +50,29 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // checkBox1
+            // CBAdmin
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
-            checkBox1.ForeColor = SystemColors.Control;
-            checkBox1.Location = new Point(786, 305);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(96, 32);
-            checkBox1.TabIndex = 1;
-            checkBox1.Text = "Admin";
-            checkBox1.UseVisualStyleBackColor = true;
+            CBAdmin.AutoSize = true;
+            CBAdmin.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
+            CBAdmin.ForeColor = SystemColors.Control;
+            CBAdmin.Location = new Point(786, 305);
+            CBAdmin.Name = "CBAdmin";
+            CBAdmin.Size = new Size(96, 32);
+            CBAdmin.TabIndex = 1;
+            CBAdmin.Text = "Admin";
+            CBAdmin.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // CBCustomer
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
-            checkBox2.ForeColor = SystemColors.Control;
-            checkBox2.Location = new Point(786, 350);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(124, 32);
-            checkBox2.TabIndex = 2;
-            checkBox2.Text = "Customer";
-            checkBox2.UseVisualStyleBackColor = true;
+            CBCustomer.AutoSize = true;
+            CBCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
+            CBCustomer.ForeColor = SystemColors.Control;
+            CBCustomer.Location = new Point(786, 350);
+            CBCustomer.Name = "CBCustomer";
+            CBCustomer.Size = new Size(124, 32);
+            CBCustomer.TabIndex = 2;
+            CBCustomer.Text = "Customer";
+            CBCustomer.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -106,6 +106,7 @@
             button1.TabIndex = 5;
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
@@ -144,8 +145,8 @@
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
+            Controls.Add(CBCustomer);
+            Controls.Add(CBAdmin);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Login";
@@ -160,8 +161,8 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
+        private CheckBox CBAdmin;
+        private CheckBox CBCustomer;
         private Label label1;
         private Label label2;
         private Button button1;

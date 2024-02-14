@@ -16,5 +16,10 @@ namespace BookStore.WinForms
         {
             InitializeComponent();
         }
+
+        private void DeleteCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

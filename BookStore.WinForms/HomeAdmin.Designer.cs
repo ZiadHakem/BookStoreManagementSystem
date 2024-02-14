@@ -1,6 +1,6 @@
 ﻿namespace BookStore.WinForms
 {
-    partial class Home
+    partial class HomeAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             pictureBox1 = new PictureBox();
-            btnAddBook = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            btOrders = new Button();
+            btCustomer = new Button();
+            btCategories = new Button();
+            btBooks = new Button();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -47,49 +47,51 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // btnAddBook
+            // btOrders
             // 
-            btnAddBook.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic);
-            btnAddBook.ForeColor = Color.FromArgb(69, 51, 39);
-            btnAddBook.Location = new Point(36, 179);
-            btnAddBook.Name = "btnAddBook";
-            btnAddBook.Size = new Size(162, 58);
-            btnAddBook.TabIndex = 1;
-            btnAddBook.Text = "Orders";
-            btnAddBook.UseVisualStyleBackColor = true;
+            btOrders.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic);
+            btOrders.ForeColor = Color.FromArgb(69, 51, 39);
+            btOrders.Location = new Point(36, 179);
+            btOrders.Name = "btOrders";
+            btOrders.Size = new Size(162, 58);
+            btOrders.TabIndex = 1;
+            btOrders.Text = "Orders";
+            btOrders.UseVisualStyleBackColor = true;
+            btOrders.Click += btOrders_Click;
             // 
-            // button2
+            // btCustomer
             // 
-            button2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic);
-            button2.ForeColor = Color.FromArgb(69, 51, 39);
-            button2.Location = new Point(278, 179);
-            button2.Name = "button2";
-            button2.Size = new Size(162, 58);
-            button2.TabIndex = 2;
-            button2.Text = "Customers";
-            button2.UseVisualStyleBackColor = true;
+            btCustomer.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic);
+            btCustomer.ForeColor = Color.FromArgb(69, 51, 39);
+            btCustomer.Location = new Point(278, 179);
+            btCustomer.Name = "btCustomer";
+            btCustomer.Size = new Size(162, 58);
+            btCustomer.TabIndex = 2;
+            btCustomer.Text = "Customers";
+            btCustomer.UseVisualStyleBackColor = true;
+            btCustomer.Click += btCustomer_Click;
             // 
-            // button3
+            // btCategories
             // 
-            button3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic);
-            button3.ForeColor = Color.FromArgb(69, 51, 39);
-            button3.Location = new Point(278, 293);
-            button3.Name = "button3";
-            button3.Size = new Size(162, 58);
-            button3.TabIndex = 3;
-            button3.Text = "Categories";
-            button3.UseVisualStyleBackColor = true;
+            btCategories.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic);
+            btCategories.ForeColor = Color.FromArgb(69, 51, 39);
+            btCategories.Location = new Point(278, 293);
+            btCategories.Name = "btCategories";
+            btCategories.Size = new Size(162, 58);
+            btCategories.TabIndex = 3;
+            btCategories.Text = "Categories";
+            btCategories.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btBooks
             // 
-            button4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic);
-            button4.ForeColor = Color.FromArgb(69, 51, 39);
-            button4.Location = new Point(36, 293);
-            button4.Name = "button4";
-            button4.Size = new Size(162, 58);
-            button4.TabIndex = 4;
-            button4.Text = "Books";
-            button4.UseVisualStyleBackColor = true;
+            btBooks.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic);
+            btBooks.ForeColor = Color.FromArgb(69, 51, 39);
+            btBooks.Location = new Point(36, 293);
+            btBooks.Name = "btBooks";
+            btBooks.Size = new Size(162, 58);
+            btBooks.TabIndex = 4;
+            btBooks.Text = "Books";
+            btBooks.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -102,7 +104,7 @@
             label1.TabIndex = 5;
             label1.Text = "Books Store Mangement";
             // 
-            // Form2
+            // HomeAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -110,12 +112,13 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(934, 450);
             Controls.Add(label1);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(btnAddBook);
+            Controls.Add(btBooks);
+            Controls.Add(btCategories);
+            Controls.Add(btCustomer);
+            Controls.Add(btOrders);
             Controls.Add(pictureBox1);
-            Name = "Form2";
+            Name = "HomeAdmin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -125,10 +128,10 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private Button btnAddBook;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btOrders;
+        private Button btCustomer;
+        private Button btCategories;
+        private Button btBooks;
         private Label label1;
     }
 }

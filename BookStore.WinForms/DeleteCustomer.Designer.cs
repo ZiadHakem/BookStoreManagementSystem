@@ -39,6 +39,7 @@
             ForeColor = SystemColors.Control;
             Name = "DeleteCustomer";
             Text = "DeleteCustomer";
+            Load += DeleteCustomer_Load;
             ResumeLayout(false);
         }
 
