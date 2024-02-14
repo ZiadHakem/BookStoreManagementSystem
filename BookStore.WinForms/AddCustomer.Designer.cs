@@ -56,7 +56,6 @@
             label1.Size = new Size(246, 46);
             label1.TabIndex = 0;
             label1.Text = "Add Customer";
-            label1.Click += this.label1_Click;
             // 
             // pictureBox1
             // 
@@ -211,7 +210,6 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "AddCustomer";
             StartPosition = FormStartPosition.CenterScreen;
-            Load += this.AddCustomer_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
