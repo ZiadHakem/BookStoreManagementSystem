@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace BookStore.WinForms
 {
-    public partial class DeleteCustomer : Form
+    public partial class DeleteAndViewCustomer : Form
     {
-        public DeleteCustomer()
+        public DeleteAndViewCustomer()
         {
             InitializeComponent();
         }
 
         private void DeleteCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

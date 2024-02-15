@@ -22,11 +22,7 @@ namespace BookStore.WinForms
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+       
         private void button3_Click(object sender, EventArgs e)
         {
             AddCustomer addCustomer = new AddCustomer();
@@ -35,7 +31,7 @@ namespace BookStore.WinForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DeleteCustomer deleteCustomer = new DeleteCustomer();
+            DeleteAndViewCustomer deleteCustomer = new DeleteAndViewCustomer();
             deleteCustomer.ShowDialog();
         }
     }

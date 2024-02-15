@@ -1,6 +1,6 @@
 ﻿namespace BookStore.WinForms
 {
-    partial class DeleteCustomer
+    partial class DeleteAndViewCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -29,38 +29,28 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            pictureBox1 = new PictureBox();
             label2 = new Label();
             TBDelCustomer = new TextBox();
             BtDelCustomer = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(546, 39);
+            label1.Location = new Point(349, 22);
             label1.Name = "label1";
-            label1.Size = new Size(286, 46);
+            label1.Size = new Size(188, 46);
             label1.TabIndex = 0;
-            label1.Text = "Delete Customer";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.image1;
-            pictureBox1.Location = new Point(2, 1);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(446, 445);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            label1.Text = "Customers";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(472, 194);
+            label2.Location = new Point(98, 391);
             label2.Name = "label2";
             label2.Size = new Size(184, 28);
             label2.TabIndex = 2;
@@ -69,7 +59,7 @@
             // TBDelCustomer
             // 
             TBDelCustomer.ForeColor = Color.FromArgb(69, 51, 39);
-            TBDelCustomer.Location = new Point(674, 198);
+            TBDelCustomer.Location = new Point(349, 395);
             TBDelCustomer.Name = "TBDelCustomer";
             TBDelCustomer.Size = new Size(222, 27);
             TBDelCustomer.TabIndex = 3;
@@ -78,33 +68,44 @@
             // 
             BtDelCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             BtDelCustomer.ForeColor = Color.FromArgb(69, 51, 39);
-            BtDelCustomer.Location = new Point(631, 303);
+            BtDelCustomer.Location = new Point(640, 386);
             BtDelCustomer.Name = "BtDelCustomer";
-            BtDelCustomer.Size = new Size(119, 37);
+            BtDelCustomer.Size = new Size(138, 38);
             BtDelCustomer.TabIndex = 4;
             BtDelCustomer.Text = "Delete";
             BtDelCustomer.UseVisualStyleBackColor = true;
             // 
-            // DeleteCustomer
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.FromArgb(69, 51, 39);
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(4, 71);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(926, 299);
+            dataGridView1.TabIndex = 5;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // DeleteAndViewCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(69, 51, 39);
             ClientSize = new Size(934, 450);
+            Controls.Add(dataGridView1);
             Controls.Add(BtDelCustomer);
             Controls.Add(TBDelCustomer);
             Controls.Add(label2);
-            Controls.Add(pictureBox1);
             Controls.Add(label1);
             ForeColor = SystemColors.Control;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "DeleteCustomer";
+            Name = "DeleteAndViewCustomer";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Delete Customer";
+            Text = "Customers";
             Load += DeleteCustomer_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -112,9 +113,9 @@
         #endregion
 
         private Label label1;
-        private PictureBox pictureBox1;
         private Label label2;
         private TextBox TBDelCustomer;
         private Button BtDelCustomer;
+        private DataGridView dataGridView1;
     }
 }

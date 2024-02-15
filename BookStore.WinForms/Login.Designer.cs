@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             pictureBox1 = new PictureBox();
-            CBAdmin = new CheckBox();
-            CBCustomer = new CheckBox();
             label1 = new Label();
             label2 = new Label();
             button1 = new Button();
             TBUserName = new TextBox();
             textBox2 = new TextBox();
             label3 = new Label();
+            RBAdmin = new RadioButton();
+            RBCustomer = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -49,30 +49,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            // 
-            // CBAdmin
-            // 
-            CBAdmin.AutoSize = true;
-            CBAdmin.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
-            CBAdmin.ForeColor = SystemColors.Control;
-            CBAdmin.Location = new Point(786, 305);
-            CBAdmin.Name = "CBAdmin";
-            CBAdmin.Size = new Size(96, 32);
-            CBAdmin.TabIndex = 1;
-            CBAdmin.Text = "Admin";
-            CBAdmin.UseVisualStyleBackColor = true;
-            // 
-            // CBCustomer
-            // 
-            CBCustomer.AutoSize = true;
-            CBCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
-            CBCustomer.ForeColor = SystemColors.Control;
-            CBCustomer.Location = new Point(786, 350);
-            CBCustomer.Name = "CBCustomer";
-            CBCustomer.Size = new Size(124, 32);
-            CBCustomer.TabIndex = 2;
-            CBCustomer.Text = "Customer";
-            CBCustomer.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -100,7 +76,7 @@
             // 
             button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.FromArgb(69, 51, 39);
-            button1.Location = new Point(570, 324);
+            button1.Location = new Point(575, 331);
             button1.Name = "button1";
             button1.Size = new Size(129, 42);
             button1.TabIndex = 5;
@@ -113,7 +89,7 @@
             TBUserName.ForeColor = Color.FromArgb(69, 51, 39);
             TBUserName.Location = new Point(668, 188);
             TBUserName.Name = "TBUserName";
-            TBUserName.Size = new Size(164, 27);
+            TBUserName.Size = new Size(200, 27);
             TBUserName.TabIndex = 6;
             // 
             // textBox2
@@ -121,7 +97,7 @@
             textBox2.ForeColor = Color.FromArgb(69, 51, 39);
             textBox2.Location = new Point(668, 233);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(164, 27);
+            textBox2.Size = new Size(200, 27);
             textBox2.TabIndex = 7;
             // 
             // label3
@@ -135,20 +111,46 @@
             label3.TabIndex = 8;
             label3.Text = "Login";
             // 
+            // RBAdmin
+            // 
+            RBAdmin.AutoSize = true;
+            RBAdmin.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
+            RBAdmin.ForeColor = SystemColors.Control;
+            RBAdmin.Location = new Point(761, 305);
+            RBAdmin.Name = "RBAdmin";
+            RBAdmin.Size = new Size(95, 32);
+            RBAdmin.TabIndex = 9;
+            RBAdmin.TabStop = true;
+            RBAdmin.Text = "Admin";
+            RBAdmin.UseVisualStyleBackColor = true;
+            // 
+            // RBCustomer
+            // 
+            RBCustomer.AutoSize = true;
+            RBCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
+            RBCustomer.ForeColor = SystemColors.Control;
+            RBCustomer.Location = new Point(761, 361);
+            RBCustomer.Name = "RBCustomer";
+            RBCustomer.Size = new Size(123, 32);
+            RBCustomer.TabIndex = 10;
+            RBCustomer.TabStop = true;
+            RBCustomer.Text = "Customer";
+            RBCustomer.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(69, 51, 39);
             ClientSize = new Size(934, 450);
+            Controls.Add(RBCustomer);
+            Controls.Add(RBAdmin);
             Controls.Add(label3);
             Controls.Add(textBox2);
             Controls.Add(TBUserName);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(CBCustomer);
-            Controls.Add(CBAdmin);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
@@ -165,13 +167,13 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private CheckBox CBAdmin;
-        private CheckBox CBCustomer;
         private Label label1;
         private Label label2;
         private Button button1;
         private TextBox TBUserName;
         private TextBox textBox2;
         private Label label3;
+        private RadioButton RBAdmin;
+        private RadioButton RBCustomer;
     }
 }

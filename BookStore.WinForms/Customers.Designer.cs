@@ -33,20 +33,19 @@
             BtUpdateCustomer = new Button();
             BtDelCustomer = new Button();
             BtAddCustomer = new Button();
-            BtViewCustomer = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(88, 58);
+            label1.Location = new Point(77, 32);
             label1.Name = "label1";
-            label1.Size = new Size(186, 50);
+            label1.Size = new Size(219, 54);
             label1.TabIndex = 0;
-            label1.Text = "Customer";
+            label1.Text = "Customers";
             // 
             // pictureBox1
             // 
@@ -60,45 +59,34 @@
             // BtUpdateCustomer
             // 
             BtUpdateCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
-            BtUpdateCustomer.Location = new Point(36, 195);
+            BtUpdateCustomer.Location = new Point(36, 264);
             BtUpdateCustomer.Name = "BtUpdateCustomer";
-            BtUpdateCustomer.Size = new Size(127, 39);
+            BtUpdateCustomer.Size = new Size(289, 39);
             BtUpdateCustomer.TabIndex = 2;
-            BtUpdateCustomer.Text = "Udate";
+            BtUpdateCustomer.Text = "Update Data For Customer";
             BtUpdateCustomer.UseVisualStyleBackColor = true;
             // 
             // BtDelCustomer
             // 
             BtDelCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
-            BtDelCustomer.Location = new Point(207, 195);
+            BtDelCustomer.Location = new Point(36, 355);
             BtDelCustomer.Name = "BtDelCustomer";
-            BtDelCustomer.Size = new Size(127, 39);
+            BtDelCustomer.Size = new Size(289, 39);
             BtDelCustomer.TabIndex = 3;
-            BtDelCustomer.Text = "Delete";
+            BtDelCustomer.Text = "View All Customers";
             BtDelCustomer.UseVisualStyleBackColor = true;
             BtDelCustomer.Click += button2_Click;
             // 
             // BtAddCustomer
             // 
             BtAddCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
-            BtAddCustomer.Location = new Point(36, 278);
+            BtAddCustomer.Location = new Point(36, 174);
             BtAddCustomer.Name = "BtAddCustomer";
-            BtAddCustomer.Size = new Size(127, 39);
+            BtAddCustomer.Size = new Size(289, 39);
             BtAddCustomer.TabIndex = 4;
-            BtAddCustomer.Text = "Add";
+            BtAddCustomer.Text = "Add Customer";
             BtAddCustomer.UseVisualStyleBackColor = true;
             BtAddCustomer.Click += button3_Click;
-            // 
-            // BtViewCustomer
-            // 
-            BtViewCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
-            BtViewCustomer.Location = new Point(207, 278);
-            BtViewCustomer.Name = "BtViewCustomer";
-            BtViewCustomer.Size = new Size(127, 39);
-            BtViewCustomer.TabIndex = 5;
-            BtViewCustomer.Text = "View";
-            BtViewCustomer.UseVisualStyleBackColor = true;
-            BtViewCustomer.Click += button4_Click;
             // 
             // Customers
             // 
@@ -106,7 +94,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(69, 51, 39);
             ClientSize = new Size(934, 450);
-            Controls.Add(BtViewCustomer);
             Controls.Add(BtAddCustomer);
             Controls.Add(BtDelCustomer);
             Controls.Add(BtUpdateCustomer);
@@ -117,7 +104,7 @@
             MinimizeBox = false;
             Name = "Customers";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Customer";
+            Text = "Customers";
             Load += Customers_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -131,6 +118,5 @@
         private Button BtUpdateCustomer;
         private Button BtDelCustomer;
         private Button BtAddCustomer;
-        private Button BtViewCustomer;
     }
 }

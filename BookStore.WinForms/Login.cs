@@ -29,7 +29,7 @@ namespace BookStore.WinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (CBAdmin.Checked)
+            if (RBAdmin.Checked)
             {
                 HomeAdmin homeAdmin = new HomeAdmin();
                   homeAdmin.Show();
