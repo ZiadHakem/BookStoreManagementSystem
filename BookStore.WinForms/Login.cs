@@ -1,6 +1,7 @@
 ﻿using BookStore.Core.Services.Contracts;
 using BookStore.Repository.Data;
 using BookStore.Service;
+using BookStore.WinForms.CustomerForms;
 using Microsoft.IdentityModel.Protocols;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace BookStore.WinForms
 {
     public partial class Login : Form
     {
-        
+
         public Login()
         {
             InitializeComponent();
@@ -32,10 +33,16 @@ namespace BookStore.WinForms
             if (RBAdmin.Checked)
             {
                 HomeAdmin homeAdmin = new HomeAdmin();
-                  homeAdmin.Show();
+                homeAdmin.Show();
             }
 
-           
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Register register = new Register();
+            register.Show();
         }
     }
 }

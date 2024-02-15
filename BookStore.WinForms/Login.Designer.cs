@@ -37,6 +37,7 @@
             label3 = new Label();
             RBAdmin = new RadioButton();
             RBCustomer = new RadioButton();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -137,12 +138,25 @@
             RBCustomer.Text = "Customer";
             RBCustomer.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.FromArgb(69, 51, 39);
+            button2.Location = new Point(793, 12);
+            button2.Name = "button2";
+            button2.Size = new Size(129, 42);
+            button2.TabIndex = 11;
+            button2.Text = "Register";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(69, 51, 39);
             ClientSize = new Size(934, 450);
+            Controls.Add(button2);
             Controls.Add(RBCustomer);
             Controls.Add(RBAdmin);
             Controls.Add(label3);
@@ -175,5 +189,6 @@
         private Label label3;
         private RadioButton RBAdmin;
         private RadioButton RBCustomer;
+        private Button button2;
     }
 }

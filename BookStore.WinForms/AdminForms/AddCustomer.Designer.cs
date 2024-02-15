@@ -170,6 +170,7 @@
             TBPassword.ForeColor = Color.FromArgb(69, 51, 39);
             TBPassword.Location = new Point(636, 224);
             TBPassword.Name = "TBPassword";
+            TBPassword.PasswordChar = '*';
             TBPassword.Size = new Size(262, 27);
             TBPassword.TabIndex = 12;
             // 
