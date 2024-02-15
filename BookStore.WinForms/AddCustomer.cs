@@ -16,5 +16,10 @@ namespace BookStore.WinForms
         {
             InitializeComponent();
         }
+
+        private void AddCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

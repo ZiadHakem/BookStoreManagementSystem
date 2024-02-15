@@ -43,6 +43,7 @@
             label1.Size = new Size(323, 54);
             label1.TabIndex = 1;
             label1.Text = "View Customers";
+            label1.Click += label1_Click;
             // 
             // dataGridView1
             // 
@@ -65,7 +66,7 @@
             button1.Text = "View";
             button1.UseVisualStyleBackColor = true;
             // 
-            // Form7
+            // ViewCustomers
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -75,8 +76,12 @@
             Controls.Add(dataGridView1);
             Controls.Add(label1);
             ForeColor = SystemColors.Control;
-            Name = "Form7";
-            Text = "Form7";
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "ViewCustomers";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "View Custmoer";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

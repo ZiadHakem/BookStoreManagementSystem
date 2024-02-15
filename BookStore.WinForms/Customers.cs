@@ -16,5 +16,28 @@ namespace BookStore.WinForms
         {
             InitializeComponent();
         }
+
+        private void Customers_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ViewCustomers viewCustomers = new ViewCustomers();
+            viewCustomers.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AddCustomer addCustomer = new AddCustomer();
+            addCustomer.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DeleteCustomer deleteCustomer = new DeleteCustomer();
+            deleteCustomer.ShowDialog();
+        }
     }
 }

@@ -117,6 +117,9 @@
             Controls.Add(btCustomer);
             Controls.Add(btOrders);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "HomeAdmin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin";

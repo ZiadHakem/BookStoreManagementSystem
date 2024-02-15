@@ -135,6 +135,7 @@
             // 
             // TBName
             // 
+            TBName.ForeColor = Color.FromArgb(69, 51, 39);
             TBName.Location = new Point(164, 122);
             TBName.Name = "TBName";
             TBName.Size = new Size(262, 27);
@@ -142,6 +143,7 @@
             // 
             // TBPhone
             // 
+            TBPhone.ForeColor = Color.FromArgb(69, 51, 39);
             TBPhone.Location = new Point(164, 218);
             TBPhone.Name = "TBPhone";
             TBPhone.Size = new Size(262, 27);
@@ -149,6 +151,7 @@
             // 
             // TBAddress
             // 
+            TBAddress.ForeColor = Color.FromArgb(69, 51, 39);
             TBAddress.Location = new Point(636, 113);
             TBAddress.Name = "TBAddress";
             TBAddress.Size = new Size(262, 27);
@@ -156,6 +159,7 @@
             // 
             // TBUserName
             // 
+            TBUserName.ForeColor = Color.FromArgb(69, 51, 39);
             TBUserName.Location = new Point(636, 172);
             TBUserName.Name = "TBUserName";
             TBUserName.Size = new Size(262, 27);
@@ -163,6 +167,7 @@
             // 
             // TBPassword
             // 
+            TBPassword.ForeColor = Color.FromArgb(69, 51, 39);
             TBPassword.Location = new Point(636, 224);
             TBPassword.Name = "TBPassword";
             TBPassword.Size = new Size(262, 27);
@@ -170,6 +175,7 @@
             // 
             // TBEmail
             // 
+            TBEmail.ForeColor = Color.FromArgb(69, 51, 39);
             TBEmail.Location = new Point(164, 169);
             TBEmail.Name = "TBEmail";
             TBEmail.Size = new Size(262, 27);
@@ -208,8 +214,12 @@
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "AddCustomer";
             StartPosition = FormStartPosition.CenterScreen;
+            Text = "Add Customer";
+            Load += AddCustomer_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

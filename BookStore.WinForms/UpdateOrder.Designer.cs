@@ -76,6 +76,7 @@
             // 
             // textBox1
             // 
+            textBox1.ForeColor = Color.FromArgb(69, 51, 39);
             textBox1.Location = new Point(153, 181);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(173, 27);
@@ -83,6 +84,7 @@
             // 
             // textBox2
             // 
+            textBox2.ForeColor = Color.FromArgb(69, 51, 39);
             textBox2.Location = new Point(153, 244);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(173, 27);
@@ -109,6 +111,7 @@
             button1.TabIndex = 6;
             button1.Text = "Update";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label4
             // 
@@ -123,6 +126,7 @@
             // 
             // textBox3
             // 
+            textBox3.ForeColor = Color.FromArgb(69, 51, 39);
             textBox3.Location = new Point(153, 124);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(170, 27);
@@ -143,8 +147,13 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MdiChildrenMinimizedAnchorBottom = false;
+            MinimizeBox = false;
             Name = "UpdateOrder";
-            Text = "Form4";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Update Order";
             Load += Form4_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

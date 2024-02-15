@@ -110,6 +110,7 @@
             // 
             // TBUserName
             // 
+            TBUserName.ForeColor = Color.FromArgb(69, 51, 39);
             TBUserName.Location = new Point(668, 188);
             TBUserName.Name = "TBUserName";
             TBUserName.Size = new Size(164, 27);
@@ -117,6 +118,7 @@
             // 
             // textBox2
             // 
+            textBox2.ForeColor = Color.FromArgb(69, 51, 39);
             textBox2.Location = new Point(668, 233);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(164, 27);
@@ -148,7 +150,9 @@
             Controls.Add(CBCustomer);
             Controls.Add(CBAdmin);
             Controls.Add(pictureBox1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

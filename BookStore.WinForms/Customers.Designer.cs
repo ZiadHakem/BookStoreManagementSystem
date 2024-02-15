@@ -30,21 +30,21 @@
         {
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            BtUpdateCustomer = new Button();
+            BtDelCustomer = new Button();
+            BtAddCustomer = new Button();
+            BtViewCustomer = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(108, 58);
+            label1.Location = new Point(88, 58);
             label1.Name = "label1";
-            label1.Size = new Size(151, 41);
+            label1.Size = new Size(186, 50);
             label1.TabIndex = 0;
             label1.Text = "Customer";
             // 
@@ -57,60 +57,68 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // button1
+            // BtUpdateCustomer
             // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
-            button1.Location = new Point(51, 195);
-            button1.Name = "button1";
-            button1.Size = new Size(103, 39);
-            button1.TabIndex = 2;
-            button1.Text = "Udate";
-            button1.UseVisualStyleBackColor = true;
+            BtUpdateCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
+            BtUpdateCustomer.Location = new Point(36, 195);
+            BtUpdateCustomer.Name = "BtUpdateCustomer";
+            BtUpdateCustomer.Size = new Size(127, 39);
+            BtUpdateCustomer.TabIndex = 2;
+            BtUpdateCustomer.Text = "Udate";
+            BtUpdateCustomer.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtDelCustomer
             // 
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
-            button2.Location = new Point(222, 195);
-            button2.Name = "button2";
-            button2.Size = new Size(103, 39);
-            button2.TabIndex = 3;
-            button2.Text = "Delete";
-            button2.UseVisualStyleBackColor = true;
+            BtDelCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
+            BtDelCustomer.Location = new Point(207, 195);
+            BtDelCustomer.Name = "BtDelCustomer";
+            BtDelCustomer.Size = new Size(127, 39);
+            BtDelCustomer.TabIndex = 3;
+            BtDelCustomer.Text = "Delete";
+            BtDelCustomer.UseVisualStyleBackColor = true;
+            BtDelCustomer.Click += button2_Click;
             // 
-            // button3
+            // BtAddCustomer
             // 
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
-            button3.Location = new Point(51, 278);
-            button3.Name = "button3";
-            button3.Size = new Size(103, 39);
-            button3.TabIndex = 4;
-            button3.Text = "Add";
-            button3.UseVisualStyleBackColor = true;
+            BtAddCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
+            BtAddCustomer.Location = new Point(36, 278);
+            BtAddCustomer.Name = "BtAddCustomer";
+            BtAddCustomer.Size = new Size(127, 39);
+            BtAddCustomer.TabIndex = 4;
+            BtAddCustomer.Text = "Add";
+            BtAddCustomer.UseVisualStyleBackColor = true;
+            BtAddCustomer.Click += button3_Click;
             // 
-            // button4
+            // BtViewCustomer
             // 
-            button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
-            button4.Location = new Point(222, 278);
-            button4.Name = "button4";
-            button4.Size = new Size(103, 39);
-            button4.TabIndex = 5;
-            button4.Text = "View";
-            button4.UseVisualStyleBackColor = true;
+            BtViewCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
+            BtViewCustomer.Location = new Point(207, 278);
+            BtViewCustomer.Name = "BtViewCustomer";
+            BtViewCustomer.Size = new Size(127, 39);
+            BtViewCustomer.TabIndex = 5;
+            BtViewCustomer.Text = "View";
+            BtViewCustomer.UseVisualStyleBackColor = true;
+            BtViewCustomer.Click += button4_Click;
             // 
-            // Form6
+            // Customers
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(69, 51, 39);
             ClientSize = new Size(934, 450);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(BtViewCustomer);
+            Controls.Add(BtAddCustomer);
+            Controls.Add(BtDelCustomer);
+            Controls.Add(BtUpdateCustomer);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
-            Name = "Form6";
-            Text = "Form6";
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "Customers";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Customer";
+            Load += Customers_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -120,9 +128,9 @@
 
         private Label label1;
         private PictureBox pictureBox1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button BtUpdateCustomer;
+        private Button BtDelCustomer;
+        private Button BtAddCustomer;
+        private Button BtViewCustomer;
     }
 }

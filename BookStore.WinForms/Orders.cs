@@ -21,5 +21,17 @@ namespace BookStore.WinForms
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5();
+            form5.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UpdateOrder updateOrder = new UpdateOrder();
+            updateOrder.ShowDialog();
+        }
     }
 }

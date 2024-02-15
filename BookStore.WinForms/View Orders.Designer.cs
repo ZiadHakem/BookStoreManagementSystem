@@ -75,8 +75,12 @@
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Form5";
-            Text = "Form5";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "View Orders";
             Load += Form5_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
