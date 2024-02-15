@@ -24,8 +24,7 @@ namespace BookStore.WinForms
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ViewCustomers viewCustomers = new ViewCustomers();
-            viewCustomers.ShowDialog();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             label2 = new Label();
-            BtViewOrders = new Button();
             BtUpdateOrder = new Button();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            dataGridView1 = new DataGridView();
+            label1 = new Label();
+            textBox1 = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -40,45 +41,49 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(50, 31);
+            label2.Location = new Point(379, 1);
             label2.Name = "label2";
             label2.Size = new Size(148, 54);
             label2.TabIndex = 1;
             label2.Text = "Orders";
             // 
-            // BtViewOrders
-            // 
-            BtViewOrders.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
-            BtViewOrders.ForeColor = Color.FromArgb(69, 51, 39);
-            BtViewOrders.Location = new Point(48, 176);
-            BtViewOrders.Name = "BtViewOrders";
-            BtViewOrders.Size = new Size(156, 58);
-            BtViewOrders.TabIndex = 2;
-            BtViewOrders.Text = "View Orders";
-            BtViewOrders.UseVisualStyleBackColor = true;
-            BtViewOrders.Click += button1_Click;
-            // 
             // BtUpdateOrder
             // 
             BtUpdateOrder.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
             BtUpdateOrder.ForeColor = Color.FromArgb(69, 51, 39);
-            BtUpdateOrder.Location = new Point(48, 290);
+            BtUpdateOrder.Location = new Point(634, 383);
             BtUpdateOrder.Name = "BtUpdateOrder";
-            BtUpdateOrder.Size = new Size(156, 58);
+            BtUpdateOrder.Size = new Size(129, 35);
             BtUpdateOrder.TabIndex = 3;
-            BtUpdateOrder.Text = "Update Order";
+            BtUpdateOrder.Text = "Update";
             BtUpdateOrder.UseVisualStyleBackColor = true;
-            BtUpdateOrder.Click += button2_Click;
             // 
-            // pictureBox1
+            // dataGridView1
             // 
-            pictureBox1.Image = Properties.Resources.imag4;
-            pictureBox1.Location = new Point(254, 1);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(679, 450);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(4, 58);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(928, 309);
+            dataGridView1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(117, 391);
+            label1.Name = "label1";
+            label1.Size = new Size(82, 31);
+            label1.TabIndex = 5;
+            label1.Text = "Status";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(287, 391);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(286, 27);
+            textBox1.TabIndex = 6;
             // 
             // Orders
             // 
@@ -86,9 +91,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(69, 51, 39);
             ClientSize = new Size(934, 450);
-            Controls.Add(pictureBox1);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Controls.Add(dataGridView1);
             Controls.Add(BtUpdateOrder);
-            Controls.Add(BtViewOrders);
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
@@ -97,15 +103,16 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Orders";
             Load += Form3_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Label label2;
-        private Button BtViewOrders;
         private Button BtUpdateOrder;
-        private PictureBox pictureBox1;
+        private DataGridView dataGridView1;
+        private Label label1;
+        private TextBox textBox1;
     }
 }
