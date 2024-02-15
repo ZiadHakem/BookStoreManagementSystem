@@ -81,6 +81,7 @@
             btCategories.TabIndex = 3;
             btCategories.Text = "Categories";
             btCategories.UseVisualStyleBackColor = true;
+            btCategories.Click += btCategories_Click;
             // 
             // btBooks
             // 

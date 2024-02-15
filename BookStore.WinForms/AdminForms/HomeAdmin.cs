@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BookStore.Core.Entities;
+using BookStore.WinForms.AdminForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +29,12 @@ namespace BookStore.WinForms
         {
             Customers customers = new Customers();
             customers.Show();
+        }
+
+        private void btCategories_Click(object sender, EventArgs e)
+        {
+            Categories categories = new Categories();
+            categories.Show();  
         }
     }
 }

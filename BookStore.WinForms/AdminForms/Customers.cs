@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookStore.WinForms
+namespace BookStore.WinForms.AdminForms
 {
     public partial class Customers : Form
     {
@@ -17,22 +17,16 @@ namespace BookStore.WinForms
             InitializeComponent();
         }
 
-        private void Customers_Load(object sender, EventArgs e)
-        {
-
-        }
-
-       
-        private void button3_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             AddCustomer addCustomer = new AddCustomer();
             addCustomer.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void BTViewAndDeleteCustomer_Click(object sender, EventArgs e)
         {
-            DeleteAndViewCustomer deleteCustomer = new DeleteAndViewCustomer();
-            deleteCustomer.ShowDialog();
+            DeleteAndViewCustomer deleteAndViewCustomer = new DeleteAndViewCustomer();
+            deleteAndViewCustomer.ShowDialog();
         }
     }
 }
