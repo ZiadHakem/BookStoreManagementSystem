@@ -1,4 +1,5 @@
 ﻿using BookStore.Core.Entities;
+using BookStore.Core.Enums;
 using BookStore.Core.Repositories.Contracts;
 using BookStore.Repository.Data;
 using Microsoft.EntityFrameworkCore;
@@ -6,7 +7,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BookStore.Repository
 {
@@ -22,5 +22,25 @@ namespace BookStore.Repository
 
         public async Task<T?> GetAsync(int id)
             => await _dbContext.Set<T>().FindAsync(id);
+
+        public CheckStatusEnum Create(T entity)
+        {
+            _dbContext.Set<T>().Add(entity);
+            if (_dbContext.SaveChanges() > 0)
+                return CheckStatusEnum.Saved;
+            return CheckStatusEnum.NotSaved;
+        }
+
+        public bool Delete(T entity)
+        {
+            _dbContext.Set<T>().Remove(entity);
+            return true;
+        }
+
+        public T Update(T entity)
+        {
+            _dbContext.Update<T>(entity);
+            return entity;
+        }
     }
 }

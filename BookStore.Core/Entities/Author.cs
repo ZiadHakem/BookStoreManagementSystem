@@ -8,8 +8,10 @@ namespace BookStore.Core.Entities
 {
     public class Author : BaseEntity
     {
-        public string? Name { get; set; }
-        public ICollection<BookAuthor>? BookAuthors { get; set; }
+        public string Name { get; set; }
+
+        // Navigational Property => Many
+        public List<BookAuthor> AuthorBooks { get; set; } = new();
 
     }
 }

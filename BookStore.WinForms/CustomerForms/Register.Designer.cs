@@ -32,7 +32,6 @@
             TBEmail = new TextBox();
             TBPassword = new TextBox();
             TBUserName = new TextBox();
-            TBAddress = new TextBox();
             TBPhone = new TextBox();
             TBName = new TextBox();
             label7 = new Label();
@@ -43,6 +42,13 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            lbNameMsg = new Label();
+            lbAddressMsg = new Label();
+            lbUserNameMsg = new Label();
+            lbEmailMsg = new Label();
+            lbPasswordMsg = new Label();
+            lbPhoneMsg = new Label();
+            TBAddrees = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -50,7 +56,7 @@
             // 
             btRegisterCustomer.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btRegisterCustomer.ForeColor = Color.FromArgb(69, 51, 39);
-            btRegisterCustomer.Location = new Point(398, 286);
+            btRegisterCustomer.Location = new Point(393, 302);
             btRegisterCustomer.Name = "btRegisterCustomer";
             btRegisterCustomer.Size = new Size(141, 40);
             btRegisterCustomer.TabIndex = 28;
@@ -69,7 +75,7 @@
             // TBPassword
             // 
             TBPassword.ForeColor = Color.FromArgb(69, 51, 39);
-            TBPassword.Location = new Point(634, 218);
+            TBPassword.Location = new Point(634, 228);
             TBPassword.Name = "TBPassword";
             TBPassword.PasswordChar = '*';
             TBPassword.Size = new Size(262, 27);
@@ -78,23 +84,15 @@
             // TBUserName
             // 
             TBUserName.ForeColor = Color.FromArgb(69, 51, 39);
-            TBUserName.Location = new Point(634, 166);
+            TBUserName.Location = new Point(634, 163);
             TBUserName.Name = "TBUserName";
             TBUserName.Size = new Size(262, 27);
             TBUserName.TabIndex = 25;
             // 
-            // TBAddress
-            // 
-            TBAddress.ForeColor = Color.FromArgb(69, 51, 39);
-            TBAddress.Location = new Point(634, 107);
-            TBAddress.Name = "TBAddress";
-            TBAddress.Size = new Size(262, 27);
-            TBAddress.TabIndex = 24;
-            // 
             // TBPhone
             // 
             TBPhone.ForeColor = Color.FromArgb(69, 51, 39);
-            TBPhone.Location = new Point(162, 212);
+            TBPhone.Location = new Point(162, 228);
             TBPhone.Name = "TBPhone";
             TBPhone.Size = new Size(262, 27);
             TBPhone.TabIndex = 23;
@@ -102,7 +100,7 @@
             // TBName
             // 
             TBName.ForeColor = Color.FromArgb(69, 51, 39);
-            TBName.Location = new Point(162, 116);
+            TBName.Location = new Point(162, 95);
             TBName.Name = "TBName";
             TBName.Size = new Size(262, 27);
             TBName.TabIndex = 22;
@@ -112,7 +110,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
             label7.ForeColor = SystemColors.Control;
-            label7.Location = new Point(503, 107);
+            label7.Location = new Point(503, 95);
             label7.Name = "label7";
             label7.Size = new Size(86, 28);
             label7.TabIndex = 21;
@@ -123,7 +121,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
             label6.ForeColor = SystemColors.Control;
-            label6.Location = new Point(31, 212);
+            label6.Location = new Point(30, 227);
             label6.Name = "label6";
             label6.Size = new Size(71, 28);
             label6.TabIndex = 20;
@@ -134,7 +132,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
             label5.ForeColor = SystemColors.Control;
-            label5.Location = new Point(31, 162);
+            label5.Location = new Point(33, 163);
             label5.Name = "label5";
             label5.Size = new Size(65, 28);
             label5.TabIndex = 19;
@@ -145,7 +143,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
             label4.ForeColor = SystemColors.Control;
-            label4.Location = new Point(31, 112);
+            label4.Location = new Point(33, 95);
             label4.Name = "label4";
             label4.Size = new Size(68, 28);
             label4.TabIndex = 18;
@@ -156,7 +154,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
             label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(503, 218);
+            label3.Location = new Point(495, 227);
             label3.Name = "label3";
             label3.Size = new Size(103, 28);
             label3.TabIndex = 17;
@@ -167,7 +165,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(503, 166);
+            label2.Location = new Point(489, 163);
             label2.Name = "label2";
             label2.Size = new Size(115, 28);
             label2.TabIndex = 16;
@@ -194,18 +192,86 @@
             pictureBox1.TabIndex = 29;
             pictureBox1.TabStop = false;
             // 
+            // lbNameMsg
+            // 
+            lbNameMsg.AutoSize = true;
+            lbNameMsg.ForeColor = Color.Red;
+            lbNameMsg.Location = new Point(33, 133);
+            lbNameMsg.Name = "lbNameMsg";
+            lbNameMsg.Size = new Size(0, 20);
+            lbNameMsg.TabIndex = 31;
+            // 
+            // lbAddressMsg
+            // 
+            lbAddressMsg.AutoSize = true;
+            lbAddressMsg.ForeColor = Color.Red;
+            lbAddressMsg.Location = new Point(503, 133);
+            lbAddressMsg.Name = "lbAddressMsg";
+            lbAddressMsg.Size = new Size(0, 20);
+            lbAddressMsg.TabIndex = 32;
+            // 
+            // lbUserNameMsg
+            // 
+            lbUserNameMsg.AutoSize = true;
+            lbUserNameMsg.ForeColor = Color.Red;
+            lbUserNameMsg.Location = new Point(505, 198);
+            lbUserNameMsg.Name = "lbUserNameMsg";
+            lbUserNameMsg.Size = new Size(0, 20);
+            lbUserNameMsg.TabIndex = 34;
+            // 
+            // lbEmailMsg
+            // 
+            lbEmailMsg.AutoSize = true;
+            lbEmailMsg.ForeColor = Color.Red;
+            lbEmailMsg.Location = new Point(35, 198);
+            lbEmailMsg.Name = "lbEmailMsg";
+            lbEmailMsg.Size = new Size(0, 20);
+            lbEmailMsg.TabIndex = 33;
+            // 
+            // lbPasswordMsg
+            // 
+            lbPasswordMsg.AutoSize = true;
+            lbPasswordMsg.ForeColor = Color.Red;
+            lbPasswordMsg.Location = new Point(503, 262);
+            lbPasswordMsg.Name = "lbPasswordMsg";
+            lbPasswordMsg.Size = new Size(0, 20);
+            lbPasswordMsg.TabIndex = 36;
+            // 
+            // lbPhoneMsg
+            // 
+            lbPhoneMsg.AutoSize = true;
+            lbPhoneMsg.ForeColor = Color.Red;
+            lbPhoneMsg.Location = new Point(33, 262);
+            lbPhoneMsg.Name = "lbPhoneMsg";
+            lbPhoneMsg.Size = new Size(0, 20);
+            lbPhoneMsg.TabIndex = 35;
+            // 
+            // TBAddrees
+            // 
+            TBAddrees.ForeColor = Color.FromArgb(69, 51, 39);
+            TBAddrees.Location = new Point(634, 95);
+            TBAddrees.Name = "TBAddrees";
+            TBAddrees.Size = new Size(262, 27);
+            TBAddrees.TabIndex = 37;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(69, 51, 39);
             ClientSize = new Size(934, 450);
+            Controls.Add(TBAddrees);
+            Controls.Add(lbPasswordMsg);
+            Controls.Add(lbPhoneMsg);
+            Controls.Add(lbUserNameMsg);
+            Controls.Add(lbEmailMsg);
+            Controls.Add(lbAddressMsg);
+            Controls.Add(lbNameMsg);
             Controls.Add(pictureBox1);
             Controls.Add(btRegisterCustomer);
             Controls.Add(TBEmail);
             Controls.Add(TBPassword);
             Controls.Add(TBUserName);
-            Controls.Add(TBAddress);
             Controls.Add(TBPhone);
             Controls.Add(TBName);
             Controls.Add(label7);
@@ -232,7 +298,6 @@
         private TextBox TBEmail;
         private TextBox TBPassword;
         private TextBox TBUserName;
-        private TextBox TBAddress;
         private TextBox TBPhone;
         private TextBox TBName;
         private Label label7;
@@ -243,5 +308,12 @@
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
+        private Label lbNameMsg;
+        private Label lbAddressMsg;
+        private Label lbUserNameMsg;
+        private Label lbEmailMsg;
+        private Label lbPasswordMsg;
+        private Label lbPhoneMsg;
+        private TextBox TBAddrees;
     }
 }

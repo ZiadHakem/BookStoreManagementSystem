@@ -1,0 +1,42 @@
+[
+  {
+    "BookId": 1,
+    "PublisherId": 1
+  },
+  {
+    "BookId": 2,
+    "PublisherId": 1
+  },
+  {
+    "BookId": 3,
+    "PublisherId": 2
+  },
+  {
+    "BookId": 4,
+    "PublisherId": 2
+  },
+  {
+    "BookId": 5,
+    "PublisherId": 3
+  },
+  {
+    "BookId": 6,
+    "PublisherId": 3
+  },
+  {
+    "BookId": 7,
+    "PublisherId": 4
+  },
+  {
+    "BookId": 8,
+    "PublisherId": 4
+  },
+  {
+    "BookId": 9,
+    "PublisherId": 5
+  },
+  {
+    "BookId": 10,
+    "PublisherId": 5
+  }
+]

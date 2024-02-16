@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace BookStore.Repository.Data.Config
 {
-    internal class BookAuthorConfigurations : IEntityTypeConfiguration<BookAuthor>
+    internal class BookPublisherConfigurations : IEntityTypeConfiguration<BookPublisher>
     {
-        public void Configure(EntityTypeBuilder<BookAuthor> builder)
+        public void Configure(EntityTypeBuilder<BookPublisher> builder)
         {
-            builder.HasKey(ba => new { ba.BookId, ba.AuthorId });
+            builder.HasKey(ba => new { ba.BookId, ba.PublisherId });
         }
     }
 }

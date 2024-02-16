@@ -13,30 +13,33 @@ namespace BookStore.Repository.Data.Config
     {
         public void Configure(EntityTypeBuilder<Book> builder)
         {
-            builder.Property(book => book.Id)
-                 .HasColumnName("ID");
 
-            builder.Property(book => book.Name)
-                .HasMaxLength(50)
-                .HasColumnType("varchar")
-                .IsRequired(true);
+            builder.Property(b => b.Title)
+                   .IsRequired()
+                   .HasMaxLength(50);
 
-            builder.Property(book => book.Price)
-                .HasColumnType("money")
-                .IsRequired(true);
+            builder.Property(b => b.Price)
+                   .IsRequired()
+                   .HasColumnType("decimal(18,2)");
 
-            builder.Property(book => book.Statue)
-                .HasMaxLength(50)
-                .HasColumnType("varchar")
-                .IsRequired(true);
+            builder.Property(b => b.Status)
+                   .IsRequired();
 
-            builder.Property(book => book.Image)
-                .HasColumnType("varchar")
-                .IsRequired(true);
+            builder.HasMany(b => b.BookOrders)
+                   .WithOne()
+                   .HasForeignKey(bo => bo.BookId);
 
-            builder.HasOne(b => b.Category)
-            .WithMany(c => c.Books)
-            .HasForeignKey(b => b.CategoryId);
+            builder.HasMany(b => b.BookCustomers)
+                   .WithOne()
+                   .HasForeignKey(bc => bc.BookId);
+
+            builder.HasMany(b => b.BookAuthors)
+                   .WithOne()
+                   .HasForeignKey(ba => ba.BookId);
+
+            builder.HasMany(b => b.BookPublishers)
+                   .WithOne()
+                   .HasForeignKey(ba => ba.BookId);
         }
     }
 }

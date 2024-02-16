@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace BookStore.Core.Entities
 {
-    public class BookPublisher
+    public class BookOrder
     {
         public int BookId { get; set; }
-        public int PublisherId { get; set; }
+        public int OrderId { get; set; }
+        public int Quantity { get; set; }
     }
 }

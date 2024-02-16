@@ -5,16 +5,15 @@
 namespace BookStore.Repository.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class Convertthetypeofpasswordpropinadminmodulefrominttostring : Migration
+    public partial class Convertaddressdatatypefromenumtostring : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<string>(
-                name: "Password",
-                table: "Admins",
-                type: "nvarchar(10)",
-                maxLength: 10,
+                name: "Address",
+                table: "Customers",
+                type: "nvarchar(max)",
                 nullable: false,
                 oldClrType: typeof(int),
                 oldType: "int");
@@ -24,13 +23,12 @@ namespace BookStore.Repository.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<int>(
-                name: "Password",
-                table: "Admins",
+                name: "Address",
+                table: "Customers",
                 type: "int",
                 nullable: false,
                 oldClrType: typeof(string),
-                oldType: "nvarchar(10)",
-                oldMaxLength: 10);
+                oldType: "nvarchar(max)");
         }
     }
 }

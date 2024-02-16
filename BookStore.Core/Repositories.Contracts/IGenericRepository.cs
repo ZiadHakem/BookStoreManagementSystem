@@ -1,4 +1,5 @@
 ﻿using BookStore.Core.Entities;
+using BookStore.Core.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,8 @@ namespace BookStore.Core.Repositories.Contracts
     {
         Task<T?> GetAsync(int id);
         Task<IEnumerable<T>> GetAllAsync();
+        CheckStatusEnum Create(T entity);
+        T Update(T entity);
+        bool Delete(T entity);
     }
 }

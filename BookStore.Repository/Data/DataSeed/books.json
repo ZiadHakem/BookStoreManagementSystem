@@ -1,0 +1,62 @@
+[
+  {
+    "Title": "I Feel Bad About My Neck",
+    "Price": 50,
+    "Status": 0,
+    "CategoryId": 1
+  },
+  {
+    "Title": "Broken Glass",
+    "Price": 60,
+    "Status": 1,
+    "CategoryId": 2
+  },
+  {
+    "Title": "The Girl With the Dragon Tattoo",
+    "Price": 70,
+    "Status": 0,
+    "CategoryId": 3
+  },
+  {
+    "Title": "Harry Potter and the Goblet of Fire",
+    "Price": 80,
+    "Status": 0,
+    "CategoryId": 4
+  },
+  {
+    "Title": "A Little Life",
+    "Price": 90,
+    "Status": 1,
+    "CategoryId": 4
+  },
+  {
+    "Title": "Chronicles: Volume One",
+    "Price": 100,
+    "Status": 1,
+    "CategoryId": 1
+  },
+  {
+    "Title": "The Tipping Point",
+    "Price": 110,
+    "Status": 0,
+    "CategoryId": 5
+  },
+  {
+    "Title": "Darkmans",
+    "Price": 120,
+    "Status": 1,
+    "CategoryId": 6
+  },
+  {
+    "Title": "The Siege",
+    "Price": 130,
+    "Status": 0,
+    "CategoryId": 7
+  },
+  {
+    "Title": "Light",
+    "Price": 140,
+    "Status": 1,
+    "CategoryId": 8
+  }
+]

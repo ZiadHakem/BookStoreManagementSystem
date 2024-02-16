@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookStore.Repository.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,14 +9,12 @@ namespace BookStore.Core.Entities
 {
     public class Order : BaseEntity
     {
+        public decimal Amount { get; set; }
         public DateTime Date { get; set; }
-        public int Amount { get; set; }
-        public int Status { get; set; }
+        public OrderStatusEnum Status { get; set; }
+        public int CustomerId { get; set; }
 
-        public int? CustomerId { get; set; }
-        public Customer? Customer { get; set; }
-
-        public int BookId { get; set; }
-        public Book Book { get; set; }
+        // Navigational Property => Many
+        public ICollection<BookOrder> OrderBooks { get; set; } = new List<BookOrder>();
     }
 }

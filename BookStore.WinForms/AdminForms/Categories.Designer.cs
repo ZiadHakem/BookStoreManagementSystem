@@ -58,7 +58,6 @@
             DGCategories.RowHeadersWidth = 51;
             DGCategories.Size = new Size(916, 290);
             DGCategories.TabIndex = 1;
-            DGCategories.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label2
             // 
@@ -88,6 +87,7 @@
             BTAddCategories.TabIndex = 4;
             BTAddCategories.Text = "Add";
             BTAddCategories.UseVisualStyleBackColor = true;
+            BTAddCategories.Click += BTAddCategories_Click;
             // 
             // BTUpdateCategories
             // 
@@ -99,6 +99,7 @@
             BTUpdateCategories.TabIndex = 5;
             BTUpdateCategories.Text = "Update";
             BTUpdateCategories.UseVisualStyleBackColor = true;
+            BTUpdateCategories.Click += BTUpdateCategories_Click;
             // 
             // BTDelCategories
             // 
@@ -110,6 +111,7 @@
             BTDelCategories.TabIndex = 6;
             BTDelCategories.Text = "Delete";
             BTDelCategories.UseVisualStyleBackColor = true;
+            BTDelCategories.Click += BTDelCategories_Click;
             // 
             // Categories
             // 

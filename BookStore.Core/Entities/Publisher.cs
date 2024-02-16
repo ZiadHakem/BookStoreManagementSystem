@@ -8,7 +8,9 @@ namespace BookStore.Core.Entities
 {
     public class Publisher:BaseEntity
     {
-        public string? Name { get; set; }
-        public ICollection<BookPublisher>? BookPublishers { get; set; }
+        public string Name { get; set; }
+
+        // Navigational Property => Many
+        public ICollection<BookPublisher> PublisherBooks { get; set; } = new List<BookPublisher>();
     }
 }

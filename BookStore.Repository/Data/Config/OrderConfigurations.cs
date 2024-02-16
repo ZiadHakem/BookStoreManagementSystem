@@ -13,30 +13,21 @@ namespace BookStore.Repository.Data.Config
     {
         public void Configure(EntityTypeBuilder<Order> builder)
         {
-            builder.Property(order => order.Id)
-                .HasColumnName("Number");
+            builder.Property(o => o.Amount)
+                   .IsRequired()
+                   .HasColumnType("decimal(18,2)");
 
-            builder.Property(order => order.Amount)
-                .HasColumnType("money")
-                .IsRequired(true);
+            builder.Property(o => o.Date)
+                   .IsRequired();
 
-            builder.Property(order => order.Date)
-                .HasColumnType("datetime")
-                .IsRequired(true);
+            builder.Property(o => o.Status)
+                   .IsRequired();
 
-            builder.Property(order => order.Status)
-                .IsRequired(true)
-                .HasColumnType("int");
+            builder.HasMany(o => o.OrderBooks)
+                   .WithOne()
+                   .HasForeignKey(bo => bo.OrderId);
 
-            builder.HasOne(order => order.Customer)
-            .WithMany(customer => customer.Orders)
-            .HasForeignKey(order => order.CustomerId)
-            .IsRequired(false);
-
-            builder.HasOne(o => o.Book)
-           .WithMany(b => b.Orders)
-           .HasForeignKey(o => o.BookId);
-
+            
         }
     }
 }

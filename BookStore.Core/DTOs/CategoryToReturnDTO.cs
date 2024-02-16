@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookStore.Core.Entities
+namespace BookStore.Core.DTOs
 {
-    public class Admin : BaseEntity
+    public class CategoryToReturnDTO
     {
+        public int Index { get; set; }
         public string Name { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
+        public int CountOfBooks { get; set; }
     }
 }

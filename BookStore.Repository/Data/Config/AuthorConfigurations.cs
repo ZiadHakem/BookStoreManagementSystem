@@ -13,13 +13,13 @@ namespace BookStore.Repository.Data.Config
     {
         public void Configure(EntityTypeBuilder<Author> builder)
         {
-            builder.Property(author => author.Id)
-                .HasColumnName("ID");
+            builder.Property(a => a.Name)
+                   .IsRequired()
+                   .HasMaxLength(30);
 
-            builder.Property(author => author.Name)
-                .HasMaxLength(50)
-                .HasColumnType("varchar")
-                .IsRequired(true);
+            builder.HasMany(a => a.AuthorBooks)
+                   .WithOne()
+                   .HasForeignKey(a => a.AuthorId);
         }
     }
 }

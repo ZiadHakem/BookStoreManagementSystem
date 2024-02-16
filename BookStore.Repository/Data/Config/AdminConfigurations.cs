@@ -15,7 +15,7 @@ namespace BookStore.Repository.Data.Config
         {
             builder.Property(p => p.Name)
                    .IsRequired()
-                   .HasMaxLength(100);
+                   .HasMaxLength(30);
 
             builder.Property(p => p.UserName)
                    .IsRequired()

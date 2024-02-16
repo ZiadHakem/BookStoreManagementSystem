@@ -1,4 +1,5 @@
-﻿using BookStore.Core.Services.Contracts;
+﻿using BookStore.Core.Enums;
+using BookStore.Core.Services.Contracts;
 using BookStore.Repository.Data;
 using BookStore.Service;
 using BookStore.WinForms.CustomerForms;
@@ -18,6 +19,9 @@ namespace BookStore.WinForms
 {
     public partial class Login : Form
     {
+        static StoreContext dbContext = new StoreContext();
+        ICustomerService customer = new CustomerService(dbContext);
+        IAdminService admin = new AdminService(dbContext);
 
         public Login()
         {
@@ -32,8 +36,17 @@ namespace BookStore.WinForms
         {
             if (RBAdmin.Checked)
             {
-                HomeAdmin homeAdmin = new HomeAdmin();
-                homeAdmin.Show();
+                string userName = TBUserName.Text;
+                string password = textBox2.Text;
+
+                if (admin.UserLogin(userName, password) == CheckStatusEnum.Existed)
+                {
+                    HomeAdmin homeAdmin = new HomeAdmin();
+                    homeAdmin.Show();
+                }
+                else
+                    MessageBox.Show("Invalid UserName Or Password!!");
+
             }
 
 

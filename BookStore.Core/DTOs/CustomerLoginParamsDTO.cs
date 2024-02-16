@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookStore.Core.Entities
+namespace BookStore.Core.DTOs
 {
-    public class Customer : BaseEntity
+    public class CustomerLoginParamsDTO
     {
         public string Name { get; set; }
         public string UserName { get; set; }
@@ -15,10 +15,5 @@ namespace BookStore.Core.Entities
         public string Address { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-
-        // Navigational Property => Many
-        public ICollection<Order> Orders { get; set; } = new List<Order>();
-        public ICollection<BookCustomer> CustomerBooks { get; set; } = new List<BookCustomer>();
-
     }
 }
