@@ -32,7 +32,7 @@
             BtUpdateOrder = new Button();
             dataGridView1 = new DataGridView();
             label1 = new Label();
-            textBox1 = new TextBox();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -51,12 +51,13 @@
             // 
             BtUpdateOrder.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
             BtUpdateOrder.ForeColor = Color.FromArgb(69, 51, 39);
-            BtUpdateOrder.Location = new Point(634, 383);
+            BtUpdateOrder.Location = new Point(634, 388);
             BtUpdateOrder.Name = "BtUpdateOrder";
             BtUpdateOrder.Size = new Size(129, 35);
             BtUpdateOrder.TabIndex = 3;
             BtUpdateOrder.Text = "Update";
             BtUpdateOrder.UseVisualStyleBackColor = true;
+            BtUpdateOrder.Click += BtUpdateOrder_Click;
             // 
             // dataGridView1
             // 
@@ -73,18 +74,20 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(117, 391);
+            label1.Location = new Point(178, 390);
             label1.Name = "label1";
             label1.Size = new Size(82, 31);
             label1.TabIndex = 5;
             label1.Text = "Status";
             // 
-            // textBox1
+            // comboBox1
             // 
-            textBox1.Location = new Point(287, 391);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(286, 27);
-            textBox1.TabIndex = 6;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(266, 391);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(310, 28);
+            comboBox1.TabIndex = 6;
             // 
             // Orders
             // 
@@ -92,7 +95,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(69, 51, 39);
             ClientSize = new Size(934, 450);
-            Controls.Add(textBox1);
+            Controls.Add(comboBox1);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Controls.Add(BtUpdateOrder);
@@ -114,6 +117,6 @@
         private Button BtUpdateOrder;
         private DataGridView dataGridView1;
         private Label label1;
-        private TextBox textBox1;
+        private ComboBox comboBox1;
     }
 }

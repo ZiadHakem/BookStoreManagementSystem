@@ -1,9 +1,11 @@
 ﻿using BookStore.Core.DTOs;
 using BookStore.Core.Entities;
 using BookStore.Core.Enums;
+using BookStore.Core.Repositories.Contracts;
 using BookStore.Core.Services.Contracts;
 using BookStore.Repository;
 using BookStore.Repository.Data;
+using BookStore.Repository.Helper;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,56 +15,50 @@ using System.Threading.Tasks;
 
 namespace BookStore.Service
 {
-    public class CategoryService : GenericRepository<Category>, ICategoryService
+    public class CategoryService : CategoryRepository, ICategoryService
     {
         private readonly StoreContext _dbContext;
 
         public CategoryService(StoreContext dbContext) : base(dbContext)
             => _dbContext = dbContext;
-
         public CheckStatusEnum DeleteCategory(string categoryName)
         {
-            var category = _dbContext.Categories.Where(c => c.Name == categoryName && c.Books.Count() == 0).FirstOrDefault();
-            if (category != null)
-            {
-                _dbContext.Categories.Remove(category);
-                if (_dbContext.SaveChanges() > 0)
-                    return CheckStatusEnum.Deleted;
-            }
-            return CheckStatusEnum.Notdeleted;
+            if (DeleteCategoryRep(categoryName) == true)
+                return CheckStatusEnum.Deleted;
+            else
+                return CheckStatusEnum.Notdeleted;
         }
-        public List<CategoryToReturnDTO> GetAllCategories()
+        public List<CategoryToReturnDTO>? GetAllCategories()
         {
-            var categories = _dbContext.Categories
-                .Select(c => new
-                {
-                    Category = c,
-                    BookCount = c.Books.Count
-                }).ToList();
 
-            var categoriesToReturn = categories
+            var categories = GetCategoryWithBookCount();
+
+            if (categories is not null)
+            {
+                var categoriesToReturn = categories
                 .Select((item, index) => new CategoryToReturnDTO()
                 {
-                    Index = index+1,
+                    Index = index + 1,
                     Name = item.Category.Name,
                     CountOfBooks = item.BookCount
                 })
                 .ToList();
-
-            return categoriesToReturn;
+                return categoriesToReturn;
+            }
+            return null;
         }
         public CheckStatusEnum UpdateCategory(string oldName, string newName)
         {
-           
-            CheckStatusEnum newNameStatus = Helper.NameCheck(newName);
-            if (newNameStatus == CheckStatusEnum.Empty || newNameStatus ==  CheckStatusEnum.DoesNotMatch)
+
+            CheckStatusEnum newNameStatus = Validations.NameCheck(newName);
+            if (newNameStatus == CheckStatusEnum.Empty || newNameStatus == CheckStatusEnum.DoesNotMatch)
                 return CheckStatusEnum.DoesNotMatch;
 
-            var checkCategoryExisted = _dbContext.Categories.FirstOrDefault(c => c.Name.Replace(" ", "") == newName.Replace(" ", ""));
+            var checkCategoryExisted = GetCategoryMatchedByNameRep(newName);
             if (checkCategoryExisted is not null)
                 return CheckStatusEnum.Existed;
 
-            var category = _dbContext.Categories.FirstOrDefault(c => c.Name == oldName);
+            var category = GetCategoryByNameRep(oldName);
             if (category != null)
             {
                 category.Name = newName;
@@ -73,11 +69,11 @@ namespace BookStore.Service
         }
         public CheckStatusEnum CreateCategory(string categoryName)
         {
-            CheckStatusEnum NameStatus = Helper.NameCheck(categoryName);
+            CheckStatusEnum NameStatus = Validations.NameCheck(categoryName);
             if (NameStatus == CheckStatusEnum.Empty || NameStatus == CheckStatusEnum.DoesNotMatch)
                 return CheckStatusEnum.DoesNotMatch;
 
-            var checkCategoryExisted = _dbContext.Categories.FirstOrDefault(c => c.Name.Replace(" ", "") == categoryName.Replace(" ", ""));
+            var checkCategoryExisted = GetCategoryMatchedByNameRep(categoryName);
             if (checkCategoryExisted is not null)
                 return CheckStatusEnum.Existed;
 
@@ -87,6 +83,5 @@ namespace BookStore.Service
 
             return CategoryStatus;
         }
-
     }
 }

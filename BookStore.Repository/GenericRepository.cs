@@ -17,8 +17,8 @@ namespace BookStore.Repository
         public GenericRepository(StoreContext dbContext)
             => _dbContext = dbContext;
 
-        public async Task<IEnumerable<T>> GetAllAsync()
-            => await _dbContext.Set<T>().ToListAsync();
+        public IEnumerable<T> GetAll()
+            => _dbContext.Set<T>().ToList();
 
         public async Task<T?> GetAsync(int id)
             => await _dbContext.Set<T>().FindAsync(id);
@@ -34,7 +34,9 @@ namespace BookStore.Repository
         public bool Delete(T entity)
         {
             _dbContext.Set<T>().Remove(entity);
-            return true;
+            if (_dbContext.SaveChanges() > 0)
+                return true;
+            return false;
         }
 
         public T Update(T entity)

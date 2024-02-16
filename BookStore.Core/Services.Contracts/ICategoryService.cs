@@ -11,9 +11,9 @@ namespace BookStore.Core.Services.Contracts
 {
     public interface ICategoryService
     {
-        public List<CategoryToReturnDTO> GetAllCategories();
-        public CheckStatusEnum UpdateCategory(string oldName, string newName);
-        public CheckStatusEnum DeleteCategory(string categoryName);
-        public CheckStatusEnum CreateCategory(string categoryName);
+        CheckStatusEnum DeleteCategory(string categoryName);
+        List<CategoryToReturnDTO>? GetAllCategories();
+        CheckStatusEnum UpdateCategory(string oldName, string newName);
+        CheckStatusEnum CreateCategory(string categoryName);
     }
 }

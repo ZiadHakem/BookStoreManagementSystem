@@ -4,6 +4,7 @@ using BookStore.Core.Enums;
 using BookStore.Core.Services.Contracts;
 using BookStore.Repository;
 using BookStore.Repository.Data;
+using BookStore.Repository.Helper;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace BookStore.Service
 {
-    public class CustomerService : GenericRepository<Customer>, ICustomerService
+    public class CustomerService : CustomerRepository, ICustomerService
     {
         private readonly StoreContext _dbContext;
 
@@ -22,7 +23,7 @@ namespace BookStore.Service
 
         public bool CheckIfUserExist(string userName, string password)
         {
-            var customers = _dbContext.Customers.Where(c => c.UserName == userName && c.Password == password);
+            var customers = CheckIfUserExistRepo(userName, password);
 
             if (customers is not null)
                 foreach (var customer in customers)
@@ -30,10 +31,9 @@ namespace BookStore.Service
                         return true;
             return false;
         }
-
         public CustomerLoginMsgsDTO CustomerRegister(CustomerLoginParamsDTO customerParams)
         {
-            CustomerLoginMsgsDTO Msgs = Helper.ShowCustomerRegisterMsgs(customerParams);
+            CustomerLoginMsgsDTO Msgs = Validations.ShowCustomerRegisterMsgs(customerParams);
 
             if (string.IsNullOrEmpty(Msgs.NameMsg) &&
                 string.IsNullOrEmpty(Msgs.UserNameMsg) &&
@@ -41,7 +41,7 @@ namespace BookStore.Service
                 string.IsNullOrEmpty(Msgs.EmailMsg) &&
                 string.IsNullOrEmpty(Msgs.PhoneMsg))
             {
-                var customer = Helper.mapper.Map<CustomerLoginParamsDTO, Customer>(customerParams);
+                var customer = MapConfigs.mapper.Map<CustomerLoginParamsDTO, Customer>(customerParams);
                 _dbContext.Customers.Add(customer);
                 if (_dbContext.SaveChanges() > 0)
                 {
@@ -52,10 +52,9 @@ namespace BookStore.Service
             Msgs.IsSavedMsg = CheckStatusEnum.NotSaved;
             return Msgs;
         }
-
         public CheckStatusEnum UserLogin(string userName, string password)
         {
-            var customer = _dbContext.Customers.FirstOrDefault(a => a.UserName == userName && a.Password == password);
+            var customer = CheckIfCustomerExistRepo(userName, password);
             if (customer is not null)
             {
                 if (customer.UserName == userName && customer.Password == password)

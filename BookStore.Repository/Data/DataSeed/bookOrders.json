@@ -1,0 +1,22 @@
+[
+  {
+    "BookId": 1,
+    "OrderId": 1,
+    "Quantity": 1
+  },
+  {
+    "BookId": 2,
+    "OrderId": 1,
+    "Quantity": 1
+  },
+  {
+    "BookId": 3,
+    "OrderId": 1,
+    "Quantity": 1
+  },
+  {
+    "BookId": 4,
+    "OrderId": 1,
+    "Quantity": 1
+  }
+]

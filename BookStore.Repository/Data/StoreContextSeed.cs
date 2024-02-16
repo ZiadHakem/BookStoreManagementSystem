@@ -18,7 +18,8 @@ namespace BookStore.Repository.Data
                 && _dbContext.Authors.Count() == 0
                 && _dbContext.Books.Count() == 0
                 && _dbContext.Categories.Count() == 0
-                && _dbContext.Customers.Count() == 0)
+                && _dbContext.Customers.Count() == 0
+                && _dbContext.Orders.Count() == 0)
             {
                 // Adding Admins..
                 var adminsData = File.ReadAllText("../../../../BookStore.Repository/Data/DataSeed/admins.json");
@@ -106,6 +107,28 @@ namespace BookStore.Repository.Data
                 {
                     foreach (var publisherBook in publisherBooks)
                         _dbContext.BookPublishers.Add(publisherBook);
+                    await _dbContext.SaveChangesAsync();
+                }
+
+                // Adding Orders..
+                var ordersData = File.ReadAllText("../../../../BookStore.Repository/Data/DataSeed/orders.json");
+                var orders = JsonSerializer.Deserialize<List<Order>>(ordersData);
+
+                if (orders?.Count() > 0)
+                {
+                    foreach (var order in orders)
+                        _dbContext.Orders.Add(order);
+                    await _dbContext.SaveChangesAsync();
+                }
+
+                // Adding BookOrders..
+                var bookOrdersData = File.ReadAllText("../../../../BookStore.Repository/Data/DataSeed/bookOrders.json");
+                var bookOrders = JsonSerializer.Deserialize<List<BookOrder>>(bookOrdersData);
+
+                if (bookOrders?.Count() > 0)
+                {
+                    foreach (var bookOrder in bookOrders)
+                        _dbContext.BookOrders.Add(bookOrder);
                     await _dbContext.SaveChangesAsync();
                 }
 

@@ -11,7 +11,7 @@ namespace BookStore.Core.Repositories.Contracts
     public interface IGenericRepository<T> where T : BaseEntity
     {
         Task<T?> GetAsync(int id);
-        Task<IEnumerable<T>> GetAllAsync();
+        IEnumerable<T> GetAll();
         CheckStatusEnum Create(T entity);
         T Update(T entity);
         bool Delete(T entity);

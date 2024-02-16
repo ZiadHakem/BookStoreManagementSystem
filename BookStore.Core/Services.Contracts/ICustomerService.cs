@@ -9,6 +9,7 @@ namespace BookStore.Core.Services.Contracts
 {
     public interface ICustomerService : IAuthentication
     {
+        bool CheckIfUserExist(string userName, string password);
         public CustomerLoginMsgsDTO CustomerRegister(CustomerLoginParamsDTO customerParams);
     }
 }

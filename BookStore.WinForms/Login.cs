@@ -46,10 +46,7 @@ namespace BookStore.WinForms
                 }
                 else
                     MessageBox.Show("Invalid UserName Or Password!!");
-
             }
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)

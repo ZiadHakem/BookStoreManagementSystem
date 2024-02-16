@@ -1,5 +1,7 @@
+using BookStore.Core.Entities;
 using BookStore.Repository.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 namespace BookStore.WinForms
 {

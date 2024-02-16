@@ -13,31 +13,24 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace BookStore.Service
+namespace BookStore.Repository.Helper
 {
-    public static class Helper
+    public static class Validations
     {
         private readonly static StoreContext dbContext;
         private readonly static Regex NameRegex;
         private readonly static Regex UserNameRegex;
         private readonly static Regex EmailRegex;
         private readonly static Regex PhoneRegex;
-        private static MapperConfiguration config;
-        public readonly static IMapper mapper;
+        
 
-        static Helper()
+        static Validations()
         {
             dbContext = new StoreContext();
             NameRegex = new Regex("^[a-zA-Z]+(?: [a-zA-Z]+)?$");
             UserNameRegex = new Regex("^[a-zA-Z0-9_-]*$");
             EmailRegex = new Regex("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
             PhoneRegex = new Regex("^(?:010|012|015|011)[0-9]{8}$");
-            config = new MapperConfiguration((cfg) =>
-            {
-                cfg.CreateMap<CustomerLoginParamsDTO, Customer>();
-                cfg.CreateMap<Category, CategoryToReturnDTO>();
-            });
-            mapper = config.CreateMapper();
         }
 
         public static CustomerLoginMsgsDTO ShowCustomerRegisterMsgs(CustomerLoginParamsDTO customerParams)
