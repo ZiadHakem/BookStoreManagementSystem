@@ -50,8 +50,8 @@ namespace BookStore.WinForms
 
                 if (order.UpdateOrderStatus(orderId, selectedStatus) == CheckStatusEnum.Saved)
                 {
-                    MessageBox.Show($"status updated");
                     dataGridView1.DataSource = order.ReturnOrders();
+                    MessageBox.Show($"status updated");
                 }
                 else
                     MessageBox.Show($"status not updated");
