@@ -39,7 +39,7 @@ namespace BookStore.WinForms
                 string userName = TBUserName.Text;
                 string password = textBox2.Text;
 
-                if (admin.UserLogin(userName, password) == CheckStatusEnum.Existed)
+                if (admin.UserLogin(userName, password) > 0)
                 {
                     HomeAdmin homeAdmin = new HomeAdmin();
                     homeAdmin.Show();
@@ -51,8 +51,16 @@ namespace BookStore.WinForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Register register = new Register();
-            register.Show();
+            string userName = TBUserName.Text;
+            string password = textBox2.Text;
+            int CustomerId = customer.UserLogin(userName, password);
+            if (CustomerId > 0)
+            {
+                Register register = new Register();
+                register.Show();
+            }
+            else
+                MessageBox.Show("Invalid UserName Or Password!!");
         }
     }
 }

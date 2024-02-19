@@ -9,6 +9,6 @@ namespace BookStore.Core.Services.Contracts
 {
     public interface IAuthentication
     {
-        CheckStatusEnum UserLogin(string userName, string password);
+        int UserLogin(string userName, string password);
     }
 }
