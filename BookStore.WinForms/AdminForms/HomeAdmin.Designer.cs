@@ -93,6 +93,7 @@
             btBooks.TabIndex = 4;
             btBooks.Text = "Books";
             btBooks.UseVisualStyleBackColor = true;
+            btBooks.Click += btBooks_Click;
             // 
             // label1
             // 
