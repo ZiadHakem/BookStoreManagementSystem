@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookStore.WinForms.CustomerForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,8 @@ namespace BookStore.WinForms.AdminForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddCustomer addCustomer = new AddCustomer();
-            addCustomer.ShowDialog();
+            Register register = new Register();
+            register.Show();
         }
 
         private void BTViewAndDeleteCustomer_Click(object sender, EventArgs e)

@@ -1,6 +1,7 @@
 ﻿using BookStore.Core.DTOs;
 using BookStore.Core.Entities;
 using BookStore.Core.Enums;
+using BookStore.Core.Repositories.Contracts;
 using BookStore.Core.Services.Contracts;
 using BookStore.Repository;
 using BookStore.Repository.Data;
@@ -17,7 +18,8 @@ namespace BookStore.Service
     public class CustomerService : CustomerRepository, ICustomerService
     {
         private readonly StoreContext _dbContext;
-
+      
+    
         public CustomerService(StoreContext dbContext) : base(dbContext)
             => _dbContext = dbContext;
 
@@ -64,6 +66,19 @@ namespace BookStore.Service
             }
             else
                 return CheckStatusEnum.NotExisted;
+        }
+        public Customer GetCustomerById(int customerId)
+        {
+            return GetCustomerById(customerId);
+        }
+
+        public List<Customer> GetAllCustomersTo()
+        {
+            return GetAllCustomers();
+        }
+        public void DeleteCustomerTo(int customerId)
+        {
+            DeleteCustomer(customerId);
         }
     }
 }
