@@ -1,5 +1,6 @@
 using BookStore.Core.Entities;
 using BookStore.Repository.Data;
+using BookStore.WinForms.CustomerForms;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
@@ -20,7 +21,9 @@ namespace BookStore.WinForms
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Login());
+            //Application.Run(new Login());
+            Application.Run(new HomeCustomer());
+
         }
     }
 }

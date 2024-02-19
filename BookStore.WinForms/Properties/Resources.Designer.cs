@@ -63,6 +63,16 @@ namespace BookStore.WinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap books {
+            get {
+                object obj = ResourceManager.GetObject("books", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap im {
             get {
                 object obj = ResourceManager.GetObject("im", resourceCulture);
@@ -96,16 +106,6 @@ namespace BookStore.WinForms.Properties {
         internal static System.Drawing.Bitmap image10 {
             get {
                 object obj = ResourceManager.GetObject("image10", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap image11 {
-            get {
-                object obj = ResourceManager.GetObject("image11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +236,36 @@ namespace BookStore.WinForms.Properties {
         internal static System.Drawing.Bitmap img2 {
             get {
                 object obj = ResourceManager.GetObject("img2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_02_19_181627 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-02-19 181627", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopping_cart__1_ {
+            get {
+                object obj = ResourceManager.GetObject("shopping-cart (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user__2_ {
+            get {
+                object obj = ResourceManager.GetObject("user (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
