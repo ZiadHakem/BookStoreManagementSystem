@@ -33,25 +33,5 @@ namespace BookStore.Repository
             else
                 return customers;
         }
-
-        public List<Customer> GetAllCustomers()
-        {
-            return _dbContext.Customers.ToList();
-        }
-
-        public void DeleteCustomer(int customerId)
-        {
-            var customerToDelete = _dbContext.Customers.Find(customerId);
-            if (customerToDelete != null)
-            {
-                _dbContext.Customers.Remove(customerToDelete);
-                _dbContext.SaveChanges();
-            }
-        }
-
-        Customer? ICustomerRepository.GetCustomerById(int customerId)
-        {
-            return _dbContext.Customers.FirstOrDefault(c => c.Id == customerId);
-        }
     }
 }

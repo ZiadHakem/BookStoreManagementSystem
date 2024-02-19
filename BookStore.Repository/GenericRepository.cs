@@ -13,19 +13,24 @@ namespace BookStore.Repository
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
         private readonly StoreContext _dbContext;
+        private DbSet<T> dbset ;
 
         public GenericRepository(StoreContext dbContext)
-            => _dbContext = dbContext;
+        { _dbContext = dbContext;
+
+            dbset = _dbContext.Set<T>();
+
+        }
 
         public IEnumerable<T> GetAll()
-            => _dbContext.Set<T>().ToList();
+            => dbset.ToList();
 
         public async Task<T?> GetAsync(int id)
-            => await _dbContext.Set<T>().FindAsync(id);
+            => await dbset.FindAsync(id);
 
         public CheckStatusEnum Create(T entity)
         {
-            _dbContext.Set<T>().Add(entity);
+            dbset.Add(entity);
             if (_dbContext.SaveChanges() > 0)
                 return CheckStatusEnum.Saved;
             return CheckStatusEnum.NotSaved;
@@ -33,7 +38,7 @@ namespace BookStore.Repository
 
         public bool Delete(T entity)
         {
-            _dbContext.Set<T>().Remove(entity);
+            dbset.Remove(entity);
             if (_dbContext.SaveChanges() > 0)
                 return true;
             return false;

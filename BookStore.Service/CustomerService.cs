@@ -1,7 +1,6 @@
 ﻿using BookStore.Core.DTOs;
 using BookStore.Core.Entities;
 using BookStore.Core.Enums;
-using BookStore.Core.Repositories.Contracts;
 using BookStore.Core.Services.Contracts;
 using BookStore.Repository;
 using BookStore.Repository.Data;
@@ -18,8 +17,7 @@ namespace BookStore.Service
     public class CustomerService : CustomerRepository, ICustomerService
     {
         private readonly StoreContext _dbContext;
-      
-    
+
         public CustomerService(StoreContext dbContext) : base(dbContext)
             => _dbContext = dbContext;
 
@@ -54,31 +52,18 @@ namespace BookStore.Service
             Msgs.IsSavedMsg = CheckStatusEnum.NotSaved;
             return Msgs;
         }
-        public int UserLogin(string userName, string password)
+        public CheckStatusEnum UserLogin(string userName, string password)
         {
             var customer = CheckIfCustomerExistRepo(userName, password);
             if (customer is not null)
             {
                 if (customer.UserName == userName && customer.Password == password)
-                    return customer.Id;
+                    return CheckStatusEnum.Existed;
                 else
-                    return -1;
+                    return CheckStatusEnum.NotExisted;
             }
             else
-                return -1;
-        }
-        public Customer GetCustomerById(int customerId)
-        {
-            return GetCustomerById(customerId);
-        }
-
-        public List<Customer> GetAllCustomersTo()
-        {
-            return GetAllCustomers();
-        }
-        public void DeleteCustomerTo(int customerId)
-        {
-            DeleteCustomer(customerId);
+                return CheckStatusEnum.NotExisted;
         }
     }
 }
