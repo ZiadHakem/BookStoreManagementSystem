@@ -12,18 +12,18 @@ public class AdminService : GenericRepository<Admin>, IAdminService
     public AdminService(StoreContext dbContext) : base(dbContext)
         => _dbContext = dbContext;
 
-    public CheckStatusEnum UserLogin(string userName, string password)
+    public int UserLogin(string userName, string password)
     {
         var admin = _dbContext.Admins.FirstOrDefault(a => a.UserName == userName && a.Password == password);
         if (admin is not null)
         {
             if (admin.UserName == userName && admin.Password == password)
-                return CheckStatusEnum.Existed;
+                return admin.Id;
             else
-                return CheckStatusEnum.NotExisted;
+                return -1;
         }
         else
-            return CheckStatusEnum.NotExisted;
+            return -1;
     }
 
 }

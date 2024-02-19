@@ -21,10 +21,12 @@ namespace BookStore.WinForms.CustomerForms
     public partial class Register : Form
     {
         static StoreContext dbContext = new StoreContext();
+        private readonly int _customerId;
         ICustomerService customer = new CustomerService(dbContext);
-        public Register()
+        public Register(int CustomerId)
         {
             InitializeComponent();
+            _customerId = CustomerId;
         }
 
         private void btAddCustomer_Click(object sender, EventArgs e)
