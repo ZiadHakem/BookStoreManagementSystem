@@ -34,7 +34,13 @@ namespace BookStore.WinForms
         private void btCategories_Click(object sender, EventArgs e)
         {
             Categories categories = new Categories();
-            categories.Show();  
+            categories.Show();
+        }
+
+        private void btBooks_Click(object sender, EventArgs e)
+        {
+            Books books = new Books();
+            books.Show();
         }
     }
 }
