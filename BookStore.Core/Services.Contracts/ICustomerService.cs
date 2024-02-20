@@ -1,5 +1,4 @@
 ﻿using BookStore.Core.DTOs;
-using BookStore.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +11,5 @@ namespace BookStore.Core.Services.Contracts
     {
         bool CheckIfUserExist(string userName, string password);
         public CustomerLoginMsgsDTO CustomerRegister(CustomerLoginParamsDTO customerParams);
-        public Customer? GetCustomerById(int customerId);
-        public List<Customer> GetAllCustomersTo();
-        public void DeleteCustomerTo(int customerId);
     }
 }
