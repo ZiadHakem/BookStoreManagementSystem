@@ -43,6 +43,21 @@ namespace BookStore.WinForms
                 {
                     HomeAdmin homeAdmin = new HomeAdmin();
                     homeAdmin.Show();
+                    this.Hide();
+                }
+                else
+                    MessageBox.Show("Invalid UserName Or Password!!");
+            }
+            if (RBCustomer.Checked)
+            {
+                string userName = TBUserName.Text;
+                string password = textBox2.Text;
+
+                if (customer.UserLogin(userName, password) > 0)
+                {
+                    HomeCustomer homeCustomer = new HomeCustomer();
+                    homeCustomer.Show();
+                    this.Hide();
                 }
                 else
                     MessageBox.Show("Invalid UserName Or Password!!");

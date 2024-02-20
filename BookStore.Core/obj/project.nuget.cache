@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+aS2T2jXR2a1tLNpF8pLHKXrYEuuGyiDcT2o0nhti8F1oS+JYmtYXFOP9/NcbifUbJqJlB/1ThoxzAnxtk4uyA==",
+  "dgSpecHash": "9cIezLMtlm/ip/EfDlpq8YgLggYKJu/0/JJYE/73Vk4//e/WiTiIaLOb72a34KG50onvZHBJ+N51UGgQqUr9fw==",
   "success": true,
-  "projectFilePath": "D:\\Visual C# Project\\BookStoreManagementSystem\\BookStore.Core\\BookStore.Core.csproj",
+  "projectFilePath": "D:\\BookStoreManagementSystem\\BookStore.Core\\BookStore.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

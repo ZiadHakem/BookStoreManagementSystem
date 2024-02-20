@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Visual C# Project\\BookStoreManagementSystem\\BookStore.Repository\\BookStore.Repository.csproj": {}
+    "D:\\BookStoreManagementSystem\\BookStore.Repository\\BookStore.Repository.csproj": {}
   },
   "projects": {
-    "D:\\Visual C# Project\\BookStoreManagementSystem\\BookStore.Core\\BookStore.Core.csproj": {
+    "D:\\BookStoreManagementSystem\\BookStore.Core\\BookStore.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual C# Project\\BookStoreManagementSystem\\BookStore.Core\\BookStore.Core.csproj",
+        "projectUniqueName": "D:\\BookStoreManagementSystem\\BookStore.Core\\BookStore.Core.csproj",
         "projectName": "BookStore.Core",
-        "projectPath": "D:\\Visual C# Project\\BookStoreManagementSystem\\BookStore.Core\\BookStore.Core.csproj",
-        "packagesPath": "C:\\Users\\ZIAD\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual C# Project\\BookStoreManagementSystem\\BookStore.Core\\obj\\",
+        "projectPath": "D:\\BookStoreManagementSystem\\BookStore.Core\\BookStore.Core.csproj",
+        "packagesPath": "C:\\Users\\nadaa\\.nuget\\packages\\",
+        "outputPath": "D:\\BookStoreManagementSystem\\BookStore.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ZIAD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nadaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -64,20 +64,20 @@
         }
       }
     },
-    "D:\\Visual C# Project\\BookStoreManagementSystem\\BookStore.Repository\\BookStore.Repository.csproj": {
+    "D:\\BookStoreManagementSystem\\BookStore.Repository\\BookStore.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual C# Project\\BookStoreManagementSystem\\BookStore.Repository\\BookStore.Repository.csproj",
+        "projectUniqueName": "D:\\BookStoreManagementSystem\\BookStore.Repository\\BookStore.Repository.csproj",
         "projectName": "BookStore.Repository",
-        "projectPath": "D:\\Visual C# Project\\BookStoreManagementSystem\\BookStore.Repository\\BookStore.Repository.csproj",
-        "packagesPath": "C:\\Users\\ZIAD\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual C# Project\\BookStoreManagementSystem\\BookStore.Repository\\obj\\",
+        "projectPath": "D:\\BookStoreManagementSystem\\BookStore.Repository\\BookStore.Repository.csproj",
+        "packagesPath": "C:\\Users\\nadaa\\.nuget\\packages\\",
+        "outputPath": "D:\\BookStoreManagementSystem\\BookStore.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ZIAD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nadaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -93,8 +93,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Visual C# Project\\BookStoreManagementSystem\\BookStore.Core\\BookStore.Core.csproj": {
-                "projectPath": "D:\\Visual C# Project\\BookStoreManagementSystem\\BookStore.Core\\BookStore.Core.csproj"
+              "D:\\BookStoreManagementSystem\\BookStore.Core\\BookStore.Core.csproj": {
+                "projectPath": "D:\\BookStoreManagementSystem\\BookStore.Core\\BookStore.Core.csproj"
               }
             }
           }

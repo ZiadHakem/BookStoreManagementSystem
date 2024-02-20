@@ -10,3 +10,15 @@ D:\Visual C# Project\BookStoreManagementSystem\BookStore.Core\obj\Debug\net8.0\B
 D:\Visual C# Project\BookStoreManagementSystem\BookStore.Core\obj\Debug\net8.0\refint\BookStore.Core.dll
 D:\Visual C# Project\BookStoreManagementSystem\BookStore.Core\obj\Debug\net8.0\BookStore.Core.pdb
 D:\Visual C# Project\BookStoreManagementSystem\BookStore.Core\obj\Debug\net8.0\ref\BookStore.Core.dll
+D:\BookStoreManagementSystem\BookStore.Core\bin\Debug\net8.0\BookStore.Core.deps.json
+D:\BookStoreManagementSystem\BookStore.Core\bin\Debug\net8.0\BookStore.Core.dll
+D:\BookStoreManagementSystem\BookStore.Core\bin\Debug\net8.0\BookStore.Core.pdb
+D:\BookStoreManagementSystem\BookStore.Core\obj\Debug\net8.0\BookStore.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\BookStoreManagementSystem\BookStore.Core\obj\Debug\net8.0\BookStore.Core.AssemblyInfoInputs.cache
+D:\BookStoreManagementSystem\BookStore.Core\obj\Debug\net8.0\BookStore.Core.AssemblyInfo.cs
+D:\BookStoreManagementSystem\BookStore.Core\obj\Debug\net8.0\BookStore.Core.csproj.CoreCompileInputs.cache
+D:\BookStoreManagementSystem\BookStore.Core\obj\Debug\net8.0\BookStore.Core.sourcelink.json
+D:\BookStoreManagementSystem\BookStore.Core\obj\Debug\net8.0\BookStore.Core.dll
+D:\BookStoreManagementSystem\BookStore.Core\obj\Debug\net8.0\refint\BookStore.Core.dll
+D:\BookStoreManagementSystem\BookStore.Core\obj\Debug\net8.0\BookStore.Core.pdb
+D:\BookStoreManagementSystem\BookStore.Core\obj\Debug\net8.0\ref\BookStore.Core.dll

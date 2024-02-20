@@ -16,3 +16,21 @@ D:\Visual C# Project\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.
 D:\Visual C# Project\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.0\refint\BookStore.Service.dll
 D:\Visual C# Project\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.0\BookStore.Service.pdb
 D:\Visual C# Project\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.0\ref\BookStore.Service.dll
+D:\BookStoreManagementSystem\BookStore.Service\bin\Debug\net8.0\BookStore.Service.deps.json
+D:\BookStoreManagementSystem\BookStore.Service\bin\Debug\net8.0\BookStore.Service.dll
+D:\BookStoreManagementSystem\BookStore.Service\bin\Debug\net8.0\BookStore.Service.pdb
+D:\BookStoreManagementSystem\BookStore.Service\bin\Debug\net8.0\BookStore.Core.dll
+D:\BookStoreManagementSystem\BookStore.Service\bin\Debug\net8.0\BookStore.Repository.dll
+D:\BookStoreManagementSystem\BookStore.Service\bin\Debug\net8.0\BookStore.Repository.pdb
+D:\BookStoreManagementSystem\BookStore.Service\bin\Debug\net8.0\BookStore.Core.pdb
+D:\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.0\BookStore.Service.csproj.AssemblyReference.cache
+D:\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.0\BookStore.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.0\BookStore.Service.AssemblyInfoInputs.cache
+D:\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.0\BookStore.Service.AssemblyInfo.cs
+D:\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.0\BookStore.Service.csproj.CoreCompileInputs.cache
+D:\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.0\BookStore.Service.sourcelink.json
+D:\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.0\BookStore.Service.csproj.CopyComplete
+D:\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.0\BookStore.Service.dll
+D:\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.0\refint\BookStore.Service.dll
+D:\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.0\BookStore.Service.pdb
+D:\BookStoreManagementSystem\BookStore.Service\obj\Debug\net8.0\ref\BookStore.Service.dll

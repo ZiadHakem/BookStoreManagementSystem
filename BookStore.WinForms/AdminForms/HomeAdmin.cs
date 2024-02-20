@@ -42,5 +42,15 @@ namespace BookStore.WinForms
             Books books = new Books();
             books.Show();
         }
+
+        
+        
+
+        private void PBLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.Show();
+        }
     }
 }

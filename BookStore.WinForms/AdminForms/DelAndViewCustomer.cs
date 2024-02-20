@@ -17,9 +17,9 @@ namespace BookStore.WinForms
         private void LoadCustomerData()
         {
 
-            var customers = customer.GetAllCustomersTo();
+            //var customers = customer.GetAllCustomersTo();
 
-            dataGridView1.DataSource = customers;
+            //dataGridView1.DataSource = customers;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -60,7 +60,7 @@ namespace BookStore.WinForms
             if (result == DialogResult.Yes)
             {
            
-                customer.DeleteCustomerTo(customerId); 
+               // customer.DeleteCustomerTo(customerId); 
 
                 LoadCustomerData();
             }

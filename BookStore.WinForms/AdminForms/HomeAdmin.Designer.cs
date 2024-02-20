@@ -34,7 +34,9 @@
             btCategories = new Button();
             btBooks = new Button();
             label1 = new Label();
+            PBLogout = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PBLogout).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -100,11 +102,22 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(5, 31);
+            label1.Location = new Point(0, 53);
             label1.Name = "label1";
             label1.Size = new Size(477, 54);
             label1.TabIndex = 5;
             label1.Text = "Books Store Mangement";
+            // 
+            // PBLogout
+            // 
+            PBLogout.Image = Properties.Resources.logout;
+            PBLogout.Location = new Point(429, 9);
+            PBLogout.Name = "PBLogout";
+            PBLogout.Size = new Size(41, 41);
+            PBLogout.SizeMode = PictureBoxSizeMode.StretchImage;
+            PBLogout.TabIndex = 6;
+            PBLogout.TabStop = false;
+            PBLogout.Click += PBLogout_Click;
             // 
             // HomeAdmin
             // 
@@ -113,6 +126,7 @@
             BackColor = Color.FromArgb(69, 51, 39);
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(934, 450);
+            Controls.Add(PBLogout);
             Controls.Add(label1);
             Controls.Add(btBooks);
             Controls.Add(btCategories);
@@ -126,6 +140,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PBLogout).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -138,5 +153,6 @@
         private Button btCategories;
         private Button btBooks;
         private Label label1;
+        private PictureBox PBLogout;
     }
 }

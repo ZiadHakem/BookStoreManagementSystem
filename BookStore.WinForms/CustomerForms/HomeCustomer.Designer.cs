@@ -65,6 +65,7 @@
             label13 = new Label();
             label14 = new Label();
             pictureBox8 = new PictureBox();
+            PBLogout = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PBCart).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PBAccount).BeginInit();
@@ -81,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PBLogout).BeginInit();
             SuspendLayout();
             // 
             // pictureBox3
@@ -96,7 +98,7 @@
             // 
             PBCart.BackColor = SystemColors.ScrollBar;
             PBCart.Image = Properties.Resources.shopping_cart__1_;
-            PBCart.Location = new Point(961, 5);
+            PBCart.Location = new Point(946, 5);
             PBCart.Name = "PBCart";
             PBCart.Size = new Size(54, 42);
             PBCart.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -484,12 +486,25 @@
             pictureBox8.TabIndex = 19;
             pictureBox8.TabStop = false;
             // 
+            // PBLogout
+            // 
+            PBLogout.BackColor = SystemColors.ScrollBar;
+            PBLogout.Image = Properties.Resources.logout;
+            PBLogout.Location = new Point(1032, 5);
+            PBLogout.Name = "PBLogout";
+            PBLogout.Size = new Size(41, 41);
+            PBLogout.SizeMode = PictureBoxSizeMode.StretchImage;
+            PBLogout.TabIndex = 26;
+            PBLogout.TabStop = false;
+            PBLogout.Click += PBLogout_Click;
+            // 
             // HomeCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(69, 51, 39);
             ClientSize = new Size(1085, 696);
+            Controls.Add(PBLogout);
             Controls.Add(panel6);
             Controls.Add(panel5);
             Controls.Add(panel4);
@@ -532,6 +547,7 @@
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PBLogout).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -575,5 +591,6 @@
         private Label label13;
         private Label label14;
         private PictureBox pictureBox8;
+        private PictureBox PBLogout;
     }
 }
