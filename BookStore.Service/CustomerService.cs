@@ -54,18 +54,31 @@ namespace BookStore.Service
             Msgs.IsSavedMsg = CheckStatusEnum.NotSaved;
             return Msgs;
         }
-        public CheckStatusEnum UserLogin(string userName, string password)
+        public int UserLogin(string userName, string password)
         {
             var customer = CheckIfCustomerExistRepo(userName, password);
             if (customer is not null)
             {
                 if (customer.UserName == userName && customer.Password == password)
-                    return CheckStatusEnum.Existed;
+                    return customer.Id;
                 else
-                    return CheckStatusEnum.NotExisted;
+                    return -1;
             }
             else
-                return CheckStatusEnum.NotExisted;
+                return -1;
+        }
+        public Customer GetCustomerById(int customerId)
+        {
+            return GetCustomerById(customerId);
+        }
+
+        public List<Customer> GetAllCustomersTo()
+        {
+            return GetAllCustomers();
+        }
+        public void DeleteCustomerTo(int customerId)
+        {
+            DeleteCustomer(customerId);
         }
         public Customer GetCustomerById(int customerId)
         {
